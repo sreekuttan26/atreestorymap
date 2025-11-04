@@ -62,7 +62,7 @@ const Place = () => {
                     src="/svg/Place_map.svg"
                     alt="place"
                 
-                    className="object-cover"
+                    className="object-cover w-full h-full"
 
                 />
                 {/* overlay */}
