@@ -59,7 +59,7 @@ const Place = () => {
         <div className="w-full h-full flex relative">
             <div ref={imgref} className="w-full h-full  ">
                 <img
-                    src="/svg/place_map.svg"
+                    src="/svg/Place_map.svg"
                     alt="place"
                 
                     className="object-cover"
