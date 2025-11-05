@@ -10,6 +10,7 @@ import { useEffect, useState, useRef } from "react";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import StickyImageSection from "./components/StickyImageSection";
+import SpotlightImage from "./components/Spotlightimage";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -226,6 +227,7 @@ export default function Home() {
         <Heading text="Stakeholders" />
         <Bodytext text="Where is Venkdeshpura lake?" />
       </div>
+      <SpotlightImage/>
 
 
 

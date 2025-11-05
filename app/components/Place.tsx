@@ -57,16 +57,16 @@ const Place = () => {
 
     return (
         <div className="w-full h-full flex relative">
-            <div ref={imgref} className="w-full h-full  ">
+            <div ref={imgref} className="w-full h-full flex items-center justify-center  ">
                 <img
                     src="/svg/Place_map.svg"
                     alt="place"
                 
-                    className="object-cover w-full h-full"
+                    className="object-conatin w-[65%] h-full"
 
                 />
                 {/* overlay */}
-                <div className="absolute w-full h-full top-0 left-0 bg-black opacity-30"></div>
+                <div className="absolute w-full h-full top-0 left-0 bg-black opacity-0"></div>
 
             </div>
 
