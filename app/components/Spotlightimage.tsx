@@ -3,44 +3,54 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function SpotlightImage() {
     const spotlightRef = useRef<HTMLDivElement | null>(null);
 
+    const img_ref=useRef(null)
+
     useEffect(() => {
         const spotlight = spotlightRef.current;
+        const image=img_ref.current;
         if (!spotlight) return;
 
-        // Animate the spotlight in a loop
-        gsap.to(spotlight, {
-            x: 400,
-            y: 200,
-            duration: 1,
-            repeat: 0,
-            yoyo: false,
-            ease: 'power2.inOut',
-        });
+        // Animate the spotlight 
+        ScrollTrigger.create({
+            trigger:image,
+            pin:image,
+            pinSpacing:false,
+            start:"top top",
+            
+            scrub:false,
+            markers:true
+        })
+        
+       
     }, []);
 
     return (
-        <div className="relative w-full h-[500px] overflow-hidden">
+        <div className="relative w-full h-screen overflow-hidden ">
             {/* Background Image */}
-            <Image
+            <img ref={img_ref}
                 src="/place.png"
                 alt="Background"
-                fill
-                className="object-cover brightness-60"
-                priority
+                className="object-contain w-full h-full sticky top-0 brightness-65 z-0"
             />
 
             {/* Spotlight */}
             <div
                 ref={spotlightRef}
-                className="absolute w-[150px] h-[150px] rounded-full pointer-events-none"
+                className="absolute w-[250px] h-[250px] rounded-full pointer-events-none z-100"
                 style={{
+                    top: '200px',  
+                    left: '100px',
+                    
                     background:
-                        'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 73%)',
-                    mixBlendMode: 'overlay',
+                        'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 70%)',
+                    mixBlendMode: 'screen',
                 }}
             ></div>
         </div>

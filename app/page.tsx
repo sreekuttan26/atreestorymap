@@ -11,6 +11,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import StickyImageSection from "./components/StickyImageSection";
 import SpotlightImage from "./components/Spotlightimage";
+import SpotLight from "./components/SpotLight";
+import BirdCursor from "./components/Birdcursor";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -69,7 +71,8 @@ export default function Home() {
 
 
   return (
-    <main className="w-full h-full flex flex-col ">
+    <main className="w-full h-full flex flex-col relative">
+      <BirdCursor/>
       {/* Banner video */}
       <div className="w-full h-[80vh] relative overflow-hidden">
         <Banner />
@@ -78,7 +81,7 @@ export default function Home() {
 
 
       {/* navigation menu */}
-      <div className="w-full h-[100px] bg-gray-100 shadow-xl flex gap-5 justify-evenly items-center sticky top-0 cursor-pointer z-50">
+      <div className="w-full h-[100px] bg-gray-100 shadow-xl flex gap-5 justify-evenly items-center sticky top-0 cursor-pointer z-50 bird-landing">
         {nav_items.map((nav, index) => (
           <div key={index} className={`text-lg hover:underline hover:font-bold ${activesection === nav.name ? "" : ""}`}>
             {nav.name}
@@ -91,7 +94,7 @@ export default function Home() {
 
 
       {/* introduction */}
-      <div ref={sectionRefs.Introduction} className='w-full h-auto px-[20vw]  mt-20'>
+      <div ref={sectionRefs.Introduction} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
         <Heading text="Introduction" />
         <Bodytext text="This is a story of Venkateshpura Lake – a modest freshwater lake tucked away in the northern part of Bengaluru, a story of how the lake lost its vitality as human development took precedence. Over time, it turned into a stagnant, degraded water body, until one day, a few concerned citizens decided to bring it back to life, not just for the lake’s sake, but for their own. " />
       </div>
@@ -99,7 +102,7 @@ export default function Home() {
 
 
       {/* Place */}
-      <div ref={sectionRefs.Place} className='w-full h-auto px-[20vw]  mt-20'>
+      <div ref={sectionRefs.Place} className='w-full h-auto px-[20vw]  mt-20 bird-flying'>
         <Heading text="Place" />
         <Bodytext text="Where is Venkdeshpura lake?" />
       </div>
@@ -110,7 +113,7 @@ export default function Home() {
 
 
       {/* history */}
-      <div ref={sectionRefs.History} className='w-full h-auto px-[20vw] mt-[1425px]'>
+      <div ref={sectionRefs.History} className='w-full h-auto px-[20vw] mt-[1425px] bird-landing'>
         <Heading text="History" />
         <Bodytext text="There is little by way of origin story for Venkateshpura Lake. But some little legends from history lend a narrative. Here is one such." />
         <div className='flex flex-col gap-10'>
@@ -153,7 +156,7 @@ export default function Home() {
           </div>
 
           <StickyImageSection 
-           customstyle="h-[1800px]"
+           customstyle="h-[1800px] "
           leftimg={true} 
           images={<img
             src="/GTS.png"
@@ -223,11 +226,14 @@ export default function Home() {
       </div>
 
        {/* stakeholder */}
-      <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  -mt-20'>
+      <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  -mt-20 bird-landing'>
         <Heading text="Stakeholders" />
-        <Bodytext text="Where is Venkdeshpura lake?" />
+        <Bodytext text="Who are the stakholdes of this lake?" />
       </div>
-      <SpotlightImage/>
+      <div  className="w-full h-[895px] mt-20  ">
+         <SpotLight/>
+      </div>
+    
 
 
 
@@ -237,7 +243,7 @@ export default function Home() {
 
 
 
-      <div className="w-full h-[1000px]"></div>
+      <div className="w-full h-[10000px]"> </div>
 
 
     </main>
