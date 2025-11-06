@@ -230,8 +230,10 @@ export default function Home() {
         <Heading text="Stakeholders" />
         <Bodytext text="Who are the stakholdes of this lake?" />
       </div>
-      <div  className="w-full h-[895px] mt-20  ">
+      <div  className="w-full h-[895px] mt-20 flex justify-start   relative">
          <SpotLight/>
+        
+         
       </div>
     
 

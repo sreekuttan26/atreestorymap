@@ -35,7 +35,7 @@ export default function SpotlightImage() {
         <div className="relative w-full h-screen overflow-hidden ">
             {/* Background Image */}
             <img ref={img_ref}
-                src="/place.png"
+                src="/stakeholders.svg"
                 alt="Background"
                 className="object-contain w-full h-full sticky top-0 brightness-65 z-0"
             />

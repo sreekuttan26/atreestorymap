@@ -1,25 +1,37 @@
-
 'use client'
 
 import Image from 'next/image';
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useRef, useEffect } from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef, useEffect } from 'react';
 
-
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const SpotLight = () => {
-    const imgref = useRef(null)
-    const box0ref = useRef(null)
-    const box1ref = useRef(null)
-    const box2ref = useRef(null)
-    const spotlightRef = useRef(null)
+    const imgRef = useRef<HTMLDivElement>(null);
+    const imgRef2 = useRef<HTMLDivElement>(null);
+    const img_overlay = useRef<HTMLDivElement>(null);
+    const box0Ref = useRef<HTMLDivElement>(null);
+    const box1Ref = useRef<HTMLDivElement>(null);
+    const box2Ref = useRef<HTMLDivElement>(null);
+    const box3Ref = useRef<HTMLDivElement>(null);
+    const box4Ref = useRef<HTMLDivElement>(null);
+    const box5Ref = useRef<HTMLDivElement>(null);
+    const box6Ref = useRef<HTMLDivElement>(null);
+    const boxendRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const boxes = [box0ref.current, box2ref.current, box1ref.current];
+        const boxes = [box0Ref.current, box1Ref.current, box2Ref.current,box3Ref.current,box4Ref.current,box5Ref.current,box6Ref.current];
+        const img = imgRef.current;
+        const img2 = imgRef2.current;
+        const overlay=img_overlay.current;
+        const boxend=boxendRef.current;
 
-        boxes.forEach((box, i) => {
+        if (!img) return;
+
+        // Fade-in effect for boxes
+        boxes.forEach((box) => {
+            if (!box) return;
             gsap.from(box, {
                 opacity: 0,
                 y: 50,
@@ -27,145 +39,303 @@ const SpotLight = () => {
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: box,
-                    start: 'top 50%',
+                    start: 'top 75%',
                     toggleActions: 'play none none reverse',
                 },
             });
         });
 
-
-
-
-
-        const img = imgref.current;
-        const box0 = box0ref.current;
-        const box1 = box1ref.current;
-        const box2 = box2ref.current;
-        const spotlight = spotlightRef.current;
-
-
+        // Pin the spotlight section
         ScrollTrigger.create({
             trigger: img,
-            start: "top 10%",
-            endTrigger: box1,
-            end: "top 40%",
-            pin: img,
+            start: 'top 10%',
+            endTrigger: boxend,
+            end: 'bottom 80%',
+            pin: true,
             pinSpacing: false,
-            scrub: false,
-            markers: false
-
-        })
-
-        const tl = gsap.timeline({
-           
-            scrollTrigger: {
-                trigger: boxes[0],
-                start: 'center center',
-                endTrigger: boxes[2],
-                end: 'bottom bottom',
-                scrub: true,
-                markers: false,
-                
-            },
         });
 
-        // Move spotlight over each box
-        tl.to(spotlight, { x:0}) // starting point
-            .to(spotlight, { x: 300 , y:300 }, '+=1') // move to second box
-            .to(spotlight, { y: 400 }, '+=1') // move to second box
-            // .to(spotlight, { y: 600 }, '+=1'); // move to third box
+        ScrollTrigger.create({
+            trigger: img2,
+            start: 'top 10%',
+            endTrigger: boxend,
+            end: 'bottom 80%',
+            pin: true,
+            pinSpacing: false,
+        });
+
+         ScrollTrigger.create({
+            trigger: overlay,
+            start: 'top 10%',
+            endTrigger: boxend,
+            end: 'bottom 80%',
+            pin: true,
+            pinSpacing: false,
+        });
+
+        // Animate mask position on scroll
+        // const tl = gsap.timeline({
+           
+        //     scrollTrigger: {
+        //         trigger: boxes[0],
+        //         start: 'top center',
+        //         endTrigger: boxend,
+        //         end: 'top center',
+        //         scrub: true,
+        //         markers:true
+                
+        //     },
+        // });
+
+        // // Set mask positions for each box
+        // tl.to(img, { '--maskX': '106%', '--maskY': '55%', duration: 1 })
+        // .to(img, { '--maskX': '10%', '--maskY': '54%', duration: 1 }) 
+        // .to(img, { '--maskX': '18%', '--maskY': '54%', duration: 1 }) 
+        // .to(img, { '--maskX': '19%', '--maskY': '54%', duration: 1 }) 
+        // .to(img, { '--maskX': '14%', '--maskY': '54%', duration: 1 }) 
+        // .to(img, { '--maskX': '12%', '--maskY': '54%', duration: 1 }) 
+
+        
+//   Biodiversity
+  gsap.to(img, {
+    '--maskX': '13%',
+    '--maskY': `35%`,
+    scrollTrigger: {
+      trigger: boxes[0],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //migrant
+  gsap.to(img, {
+    '--maskX': '5%',
+    '--maskY': `45%`,
+    scrollTrigger: {
+      trigger: boxes[1],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //pastorials
+  gsap.to(img, {
+    '--maskX': '15%',
+    '--maskY': `65%`,
+    scrollTrigger: {
+      trigger: boxes[2],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //fisher
+  gsap.to(img, {
+    '--maskX': '27%',
+    '--maskY': `40%`,
+    scrollTrigger: {
+      trigger: boxes[3],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //residence
+  gsap.to(img, {
+    '--maskX': '43%',
+    '--maskY': `30%`,
+    scrollTrigger: {
+      trigger: boxes[4],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //researchers
+  gsap.to(img, {
+    '--maskX': '40%',
+    '--maskY': `55%`,
+    scrollTrigger: {
+      trigger: boxes[5],
+     start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+  //governemnt
+  gsap.to(img, {
+    '--maskX': '32%',
+    '--maskY': `73%`,
+    scrollTrigger: {
+      trigger: boxes[6],
+      start: 'top 40%',
+      end: 'top 40%',
+      scrub: true,
+    
+      markers:false
+    },
+  });
+
+            
+    }, []);
+
+    return (
+        <div className="relative w-full h-full flex flex-col items-start  justify-start ">
+            
+            {/* Dimmed base image */}
+            <div ref={imgRef2} className="absolute top-0 left-0 w-full h-full flex items-center justify-start z-0">
+                <img
+                    src="/svg/stakeholders.svg"
+                    alt="dimmed"
+                    className="object-contain w-[60%] h-full brightness-70 opacity-50 "
+                />
+            </div>
+            
+
+            {/* Masked spotlight image */}
+            <div
+                ref={imgRef}
+                className="absolute top-0 left-0 w-full h-full flex items-center justify-start z-10 "
+                style={{
+                    ['--maskX' as string]: '-15%',
+                    ['--maskY' as string]: '10%',
+                    WebkitMaskImage: 'url(/spotl.png)',
+                    maskImage: 'url(/spotl.png)',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
+                    WebkitMaskPosition: 'var(--maskX) var(--maskY)',
+                    maskPosition: 'var(--maskX) var(--maskY)',
+                    WebkitMaskSize: '280px 280px',
+                    maskSize: '280px 280px',
+                    transition: 'mask-position 0.2s ease',
+                }}
+            >
+                <img
+                    src="/svg/stakeholders.svg"
+                    alt="spotlight"
+                    className="object-contain w-[60%] h-full brightness-100"
+                />
+                 
     
 
-    }, [])
-
-return (
-    <div className="w-full h-full flex relative">
-        <div ref={imgref} className="w-full h-full flex items-center justify-center relative ">
-            <img
-                src="/place.png"
-                alt="place"
-
-                className="object-conatin w-[65%] h-full brightness-60"
-
-            />
+               
+            </div>
             {/* overlay */}
-            <div className="absolute w-full h-full top-0 left-0 bg-black opacity-0"></div>
+            <div  ref={img_overlay} className=" top-0 left-0 w-full h-full bg-black -z-80 opacity-30 pointer-events-none absolute "></div>
+            
 
-            <div  ref={spotlightRef}
-                className="absolute w-[250px] h-[250px] rounded-full pointer-events-none z-100"
-                style={{
-                    top: '100px',
-                    left: '500px',
+            
 
-                    background:
-                        'radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 70%)',
-                    mixBlendMode: 'screen',
-                }}
-            ></div>
+            {/* Content boxes */}
+            <div className="relative z-20 flex flex-col gap-20 pt-40 items-end px-20 w-full ">
+                <div ref={box0Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img1"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Biodiversity</h1>
+                    <p>Venkateshpura Lake is a relatively small lake extending a little over 10 acres...</p>
+                </div>
 
+                <div ref={box1Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img2"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Migrant Workers</h1>
+                    <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment...</p>
+                </div>
+
+                <div ref={box2Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img2"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Pastorialists</h1>
+                    <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment...</p>
+                </div>
+
+                <div ref={box3Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img3"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">fisher community</h1>
+                    <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
+                </div>
+
+                <div ref={box4Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img3"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Residents</h1>
+                    <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
+                </div>
+
+                <div ref={box5Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img3"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Researchers</h1>
+                    <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
+                </div>
+
+                <div ref={box6Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                    <Image
+                        alt="img3"
+                        src="/place.png"
+                        width={500}
+                        height={300}
+                        className="object-cover rounded-lg"
+                    />
+                    <h1 className="text-lg font-semibold mt-3">Goverenment</h1>
+                    <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
+                </div>
+                {/* end box */}
+                <div ref={boxendRef} className=" p-4 w-[500px] rounded-xl opacity-90"></div>
+            </div>
+            
         </div>
 
+    );
+};
 
-
-
-        {/* containers */}
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-30 pt-50 items-end px-20 ">
-            <div ref={box0ref} className="bg-white p-4  w-[500px] flex flex-col rounded-xl opacity-90 gap-5">
-                <div className="w-full h-[350px] relative ">
-                    <Image
-                        alt="img1"
-                        src="/place.png"
-                        fill
-                        className="object-cover" />
-                </div>
-
-                <h1 className="text-lg color-b">Fisher folks</h1>
-
-
-                <p>Venkateshpura Lake is a relatively small lake, extending a little over 10 acres. It is managed by the Bruhat Bangalore Mahanagara Palike (BBMP), Bengaluru’s civic body. Located in Sampigehalli in the Arkavathy Layout of Jakkur Ward, the lake is sometimes more familiar to the locals as Sampigehalli Lake, its old name</p>
-                 <p>Venkateshpura Lake is a relatively small lake, extending a little over 10 acres. It is managed by the Bruhat Bangalore Mahanagara Palike (BBMP), Bengaluru’s civic body. Located in Sampigehalli in the Arkavathy Layout of Jakkur Ward, the lake is sometimes more familiar to the locals as Sampigehalli Lake, its old name</p>
-
-
-
-            </div>
-
-            <div ref={box2ref} className="bg-white p-4  w-[500px] flex flex-col rounded-xl opacity-90 gap-5">
-                <div className="w-full h-[200px] relative ">
-                    <Image
-                        alt="img1"
-                        src="/place.png"
-                        fill
-                        className="object-cover" />
-                </div>
-
-                <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment area that leads to Hebbala Nagara Valley, one of the five valleys of Bangalore. Being at the apex of a series of lakes, its outlet joins Rachenahalli Lake on the downstream.</p>
-
-
-
-            </div>
-
-            <div ref={box1ref} className="bg-white p-4  w-[500px] flex flex-col rounded-xl opacity-90 gap-5">
-                <div className="w-full h-[200px] relative ">
-                    <Image
-                        alt="img1"
-                        src="/place.png"
-                        fill
-                        className="object-cover" />
-                </div>
-
-                <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it and along its periphery. Most of the rock faces that covered the lake are gone. Only the rocky projection bearing the nineteenth-century Sampigehalli Auxiliary Tower Station stands to tell a story. Adjacent to the waterbody is the Jarabandemma Temple, built on a rock, which holds unique significance due to the distinct rituals observed there even today. The lake stands in the neighbourhood, amid towering buildings, as a testament to the struggle put up by many of the residents who live around it.</p>
-
-
-
-            </div>
-
-
-        </div>
-
-
-
-    </div>
-)
-}
-
-export default SpotLight
+export default SpotLight;
