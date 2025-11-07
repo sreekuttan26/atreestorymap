@@ -98,8 +98,8 @@ const SpotLight = () => {
         
 //   Biodiversity
   gsap.to(img, {
-    '--maskX': '13%',
-    '--maskY': `35%`,
+    '--maskX': '12%',
+    '--maskY': `38%`,
     scrollTrigger: {
       trigger: boxes[0],
       start: 'top 40%',
@@ -154,7 +154,7 @@ const SpotLight = () => {
 
   //residence
   gsap.to(img, {
-    '--maskX': '43%',
+    '--maskX': '45%',
     '--maskY': `30%`,
     scrollTrigger: {
       trigger: boxes[4],
@@ -215,7 +215,7 @@ const SpotLight = () => {
                 ref={imgRef}
                 className="absolute top-0 left-0 w-full h-full flex items-center justify-start z-10 "
                 style={{
-                    ['--maskX' as string]: '-15%',
+                    ['--maskX' as string]: '-20%',
                     ['--maskY' as string]: '10%',
                     WebkitMaskImage: 'url(/spotl.png)',
                     maskImage: 'url(/spotl.png)',
@@ -223,8 +223,8 @@ const SpotLight = () => {
                     maskRepeat: 'no-repeat',
                     WebkitMaskPosition: 'var(--maskX) var(--maskY)',
                     maskPosition: 'var(--maskX) var(--maskY)',
-                    WebkitMaskSize: '280px 280px',
-                    maskSize: '280px 280px',
+                    WebkitMaskSize: '250px 250px',
+                    maskSize: '250px 250px',
                     transition: 'mask-position 0.2s ease',
                 }}
             >
