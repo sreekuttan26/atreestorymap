@@ -11,8 +11,12 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import StickyImageSection from "./components/StickyImageSection";
 import SpotlightImage from "./components/Spotlightimage";
-import SpotLight from "./components/SpotLight";
+
 import BirdCursor from "./components/Birdcursor";
+import SpotLight2 from "./components/Spotlight_2";
+import Degradation from "./components/Degradation";
+import LayerReveal from "./components/LayerReveal ";
+import LayeredScroll from "./components/LayeredScroll";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,6 +29,7 @@ export default function Home() {
     Introduction: useRef(null),
     Place: useRef(null),
     History: useRef(null),
+    Degradation :useRef(null),
     Stakeholders: useRef(null),
     goal: useRef(null),
     Community: useRef(null),
@@ -201,19 +206,21 @@ export default function Home() {
               <h1 className="text-xl font-semibold color-b">Jarabandemma Temple</h1>
               <Bodytext text={
                 <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias eos possimus dolores consequuntur veritatis voluptas quidem maxime voluptatem? Quae cumque, consequuntur sed natus nesciunt praesentium accusamus deleniti! Dicta, eos aliquid.
+                 The <i>JaraBande Maramma Temple</i>, perched atop a rock by the waterbody, is a sacred space steeped in history and local tradition. Its origins are unclear, but it is thought to have been built during the Mysore kings’ reign, and was a resting place for soldiers on the move. Over time, it evolved into a sacred worship site, especially during the month of Shravan, when villagers gathered to pray for rain, offering <i>Ambali</i>, a millet-based dish.
+
                 </span>
               } />
               <Bodytext text={
                 <span>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias eos possimus dolores consequuntur veritatis voluptas quidem maxime voluptatem? Quae cumque, consequuntur sed natus nesciunt praesentium accusamus deleniti! Dicta, eos aliquid.
+                  A natural cleft in the rock near the entrance, from where fresh water flows year-round, is seen as a miraculous gift. The Dasara festival features vital rituals, including animal sacrifices. Inside the temple, uncarved stones represent powerful protectors – <i>Jarubandemma, Akkayamma</i> and the <i>Saptamatheyaru</i> (Seven Divine Mothers) – reflecting the deep connection between the community, their faith and the land.  
+
                 </span>
               } />
-              <Bodytext text={
+              {/* <Bodytext text={
                 <span>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias eos possimus dolores consequuntur veritatis voluptas quidem maxime voluptatem? Quae cumque, consequuntur sed natus nesciunt praesentium accusamus deleniti! Dicta, eos aliquid.
                 </span>
-              } />
+              } /> */}
             </div>
 
           } />
@@ -225,15 +232,39 @@ export default function Home() {
 
       </div>
 
-       {/* stakeholder */}
-      <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  -mt-20 bird-landing'>
-        <Heading text="Stakeholders" />
-        <Bodytext text="Who are the stakholdes of this lake?" />
+
+      {/* degradation */}
+      <div ref={sectionRefs.Degradation } className='w-full h-auto px-[20vw]  -mt-20 bird-landing'>
+        <Heading text="degradation" />
+        {/* <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." /> */}       
       </div>
-      <div  className="w-full h-[895px] mt-20 flex justify-start   relative">
-         <SpotLight/>
-        
+       <div>
+        <LayerReveal/>
+
+       </div>
+
+
+
+
+
+
+
+
+       {/* stakeholder */}
+      <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
+        <Heading text="Stakeholders" />
+        <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
+      </div>
+      <div  className="w-full h-[895px] mt-20 flex justify-start   relative ">
+         <SpotLight2/>        
          
+      </div>
+
+
+      {/*  */}
+     <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  mt-[4595px] bird-landing'>
+        <Heading text="Stakeholders" />
+        <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
       </div>
     
 
