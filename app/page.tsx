@@ -270,9 +270,9 @@ export default function Home() {
        
       </div>
      <div>
-          <ScrollytellingSection/>
+          {/* <ScrollytellingSection/> */}
         </div>
-        
+
 
 
 
