@@ -21,11 +21,11 @@ const SpotLight = () => {
     const boxendRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const boxes = [box0Ref.current, box1Ref.current, box2Ref.current,box3Ref.current,box4Ref.current,box5Ref.current,box6Ref.current];
+        const boxes = [box0Ref.current, box1Ref.current, box2Ref.current, box3Ref.current, box4Ref.current, box5Ref.current, box6Ref.current];
         const img = imgRef.current;
         const img2 = imgRef2.current;
-        const overlay=img_overlay.current;
-        const boxend=boxendRef.current;
+        const overlay = img_overlay.current;
+        const boxend = boxendRef.current;
 
         if (!img) return;
 
@@ -39,7 +39,7 @@ const SpotLight = () => {
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: box,
-                    start: 'top 75%',
+                    start: 'top 65%',
                     toggleActions: 'play none none reverse',
                 },
             });
@@ -64,7 +64,7 @@ const SpotLight = () => {
             pinSpacing: false,
         });
 
-         ScrollTrigger.create({
+        ScrollTrigger.create({
             trigger: overlay,
             start: 'top 10%',
             endTrigger: boxend,
@@ -75,7 +75,7 @@ const SpotLight = () => {
 
         // Animate mask position on scroll
         // const tl = gsap.timeline({
-           
+
         //     scrollTrigger: {
         //         trigger: boxes[0],
         //         start: 'top center',
@@ -83,7 +83,7 @@ const SpotLight = () => {
         //         end: 'top center',
         //         scrub: true,
         //         markers:true
-                
+
         //     },
         // });
 
@@ -95,120 +95,121 @@ const SpotLight = () => {
         // .to(img, { '--maskX': '14%', '--maskY': '54%', duration: 1 }) 
         // .to(img, { '--maskX': '12%', '--maskY': '54%', duration: 1 }) 
 
-        
-//   Biodiversity
-  gsap.to(img, {
-    '--maskX': '12%',
-    '--maskY': `38%`,
-    scrollTrigger: {
-      trigger: boxes[0],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
 
-  //migrant
-  gsap.to(img, {
-    '--maskX': '5%',
-    '--maskY': `45%`,
-    scrollTrigger: {
-      trigger: boxes[1],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
+        //   Biodiversity
+        gsap.to(img, {
+            '--maskX': '15%',
+            '--maskY': `30%`,
+            duration: 0.1,
+            scrollTrigger: {
+                trigger: boxes[0],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
 
-  //pastorials
-  gsap.to(img, {
-    '--maskX': '15%',
-    '--maskY': `65%`,
-    scrollTrigger: {
-      trigger: boxes[2],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
 
-  //fisher
-  gsap.to(img, {
-    '--maskX': '27%',
-    '--maskY': `40%`,
-    scrollTrigger: {
-      trigger: boxes[3],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
+                markers: false
+            },
+        });
 
-  //residence
-  gsap.to(img, {
-    '--maskX': '45%',
-    '--maskY': `30%`,
-    scrollTrigger: {
-      trigger: boxes[4],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
+        //migrant
+        gsap.to(img, {
+            '--maskX': '8%',
+            '--maskY': `50%`,
+            scrollTrigger: {
+                trigger: boxes[1],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
 
-  //researchers
-  gsap.to(img, {
-    '--maskX': '40%',
-    '--maskY': `55%`,
-    scrollTrigger: {
-      trigger: boxes[5],
-     start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
+                markers: false
+            },
+        });
 
-  //governemnt
-  gsap.to(img, {
-    '--maskX': '32%',
-    '--maskY': `73%`,
-    scrollTrigger: {
-      trigger: boxes[6],
-      start: 'top 40%',
-      end: 'top 40%',
-      scrub: true,
-    
-      markers:false
-    },
-  });
+        //pastorials
+        gsap.to(img, {
+            '--maskX': '18%',
+            '--maskY': `70%`,
+            scrollTrigger: {
+                trigger: boxes[2],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
 
-            
+                markers: false
+            },
+        });
+
+        //fisher
+        gsap.to(img, {
+            '--maskX': '30%',
+            '--maskY': `40%`,
+            scrollTrigger: {
+                trigger: boxes[3],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
+
+                markers: false
+            },
+        });
+
+        //residence
+        gsap.to(img, {
+            '--maskX': '44%',
+            '--maskY': `30%`,
+            scrollTrigger: {
+                trigger: boxes[4],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
+
+                markers: false
+            },
+        });
+
+        //researchers
+        gsap.to(img, {
+            '--maskX': '42%',
+            '--maskY': `60%`,
+            scrollTrigger: {
+                trigger: boxes[5],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
+
+                markers: true
+            },
+        });
+
+        //governemnt
+        gsap.to(img, {
+            '--maskX': '34%',
+            '--maskY': `90%`,
+            scrollTrigger: {
+                trigger: boxes[6],
+                start: 'top 60%',
+                end: 'center 60%',
+                scrub: true,
+                markers: false
+            },
+        });
+
+
     }, []);
 
     return (
         <div className="relative w-full h-full flex flex-col items-start  justify-start ">
-            
+
             {/* Dimmed base image */}
             <div ref={imgRef2} className="absolute top-0 left-0 w-full h-full flex items-center justify-start z-0">
                 <img
-                    src="/svg/stakeholders.svg"
+                    src="stakeholders.png"
                     alt="dimmed"
-                    className="object-contain w-[60%] h-full brightness-70 opacity-50 "
+                    className="object-contain w-[60%] h-full brightness-90 opacity-40 pl-20"
                 />
             </div>
-            
+
 
             {/* Masked spotlight image */}
             <div
@@ -223,116 +224,132 @@ const SpotLight = () => {
                     maskRepeat: 'no-repeat',
                     WebkitMaskPosition: 'var(--maskX) var(--maskY)',
                     maskPosition: 'var(--maskX) var(--maskY)',
-                    WebkitMaskSize: '250px 250px',
-                    maskSize: '250px 250px',
+                    WebkitMaskSize: '280px 280px',
+                    maskSize: '280px 280px',
                     transition: 'mask-position 0.2s ease',
                 }}
             >
                 <img
-                    src="/svg/stakeholders.svg"
+                    src="stakeholders.png"
                     alt="spotlight"
-                    className="object-contain w-[60%] h-full brightness-100"
+                    className="object-contain w-[60%] h-full brightness-100 pl-20"
                 />
-                 
-    
 
-               
+
+
+
             </div>
             {/* overlay */}
-            <div  ref={img_overlay} className=" top-0 left-0 w-full h-full bg-black -z-80 opacity-30 pointer-events-none absolute "></div>
-            
+            <div ref={img_overlay} className=" hidden top-0 left-0 w-full h-full bg-black -z-80 opacity-30 pointer-events-none absolute "></div>
 
-            
+
+
 
             {/* Content boxes */}
             <div className="relative z-20 flex flex-col gap-20 pt-40 items-end px-20 w-full ">
-                <div ref={box0Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img1"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90  ">
+                    <div ref={box0Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
+
                     <h1 className="text-lg font-semibold mt-3">Biodiversity</h1>
-                    <p>Venkateshpura Lake is a relatively small lake extending a little over 10 acres...</p>
+                    <p className="">Venkateshpura Lake is a relatively small lake extending a little over 10 acres...</p>
                 </div>
 
-                <div ref={box1Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img2"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 ">
+                    <div ref={box1Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">Migrant Workers</h1>
                     <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment...</p>
                 </div>
 
-                <div ref={box2Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img2"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div  className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                   <div ref={box2Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">Pastorialists</h1>
                     <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment...</p>
                 </div>
 
-                <div ref={box3Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img3"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div  className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                       <div ref={box3Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">fisher community</h1>
                     <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
                 </div>
 
-                <div ref={box4Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img3"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div  className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                     <div ref={box4Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">Residents</h1>
                     <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
                 </div>
 
-                <div ref={box5Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img3"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div  className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                     <div ref={box5Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">Researchers</h1>
                     <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
+                    <div className='h-[1000px] '></div>
                 </div>
 
-                <div ref={box6Ref} className="bg-white p-4 w-[500px] rounded-xl opacity-90">
-                    <Image
-                        alt="img3"
-                        src="/place.png"
-                        width={500}
-                        height={300}
-                        className="object-cover rounded-lg"
-                    />
+                <div  className="bg-white p-4 w-[500px] rounded-xl opacity-90">
+                     <div ref={box6Ref}>
+                        <Image
+                            alt="img1"
+                            src="/place.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
                     <h1 className="text-lg font-semibold mt-3">Goverenment</h1>
                     <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it...</p>
                 </div>
                 {/* end box */}
                 <div ref={boxendRef} className=" p-4 w-[500px] rounded-xl opacity-90"></div>
             </div>
-            
+
         </div>
 
     );

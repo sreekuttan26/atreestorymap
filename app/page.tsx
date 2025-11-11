@@ -104,7 +104,7 @@ export default function Home() {
       {/* Place */}
       <div ref={sectionRefs.Place} className='w-full h-auto px-[20vw]  mt-20 bird-flying'>
         <Heading text="Place" />
-        <Bodytext text="Where is Venkdeshpura lake?" />
+        <Bodytext text="Where is Venkateshpura lake? " />
       </div>
       <div ref={sectionRefs.Place} className="w-full h-[895px] mt-20">
         <Place />

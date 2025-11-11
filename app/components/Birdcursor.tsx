@@ -74,7 +74,7 @@ export default function BirdCursor() {
       ref={birdRef}
       src={isLanded ? '/bird-sit.gif' : '/bird-fly.gif'}
       alt="bird cursor"
-      className="fixed w-24 h-24 pointer-events-none z-[9999] select-none"
+      className="fixed w-48 h-48 pointer-events-none z-[9999] select-none"
       style={{
         transform: 'translate(-50%, -50%)',
       }}
