@@ -58,7 +58,7 @@ const LayerReveal = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-[700vh]">
+    <section ref={containerRef} className="relative h-[200vh]">
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-white flex items-center justify-center">
         {images.map((src, index) => (
           <img

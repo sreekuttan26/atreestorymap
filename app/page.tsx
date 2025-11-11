@@ -17,6 +17,7 @@ import SpotLight2 from "./components/Spotlight_2";
 import Degradation from "./components/Degradation";
 import LayerReveal from "./components/LayerReveal ";
 import LayeredScroll from "./components/LayeredScroll";
+import ScrollytellingSection from "./components/ScrollytellingSection";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -265,8 +266,13 @@ export default function Home() {
      <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  mt-[4595px] bird-landing'>
         <Heading text="Stakeholders" />
         <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
+
+       
       </div>
-    
+     <div>
+          <ScrollytellingSection/>
+        </div>
+        
 
 
 
