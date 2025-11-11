@@ -178,7 +178,7 @@ const SpotLight = () => {
                 end: 'center 60%',
                 scrub: true,
 
-                markers: true
+                markers: false
             },
         });
 
