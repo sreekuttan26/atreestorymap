@@ -40,7 +40,8 @@ const ScrollImageSequence: React.FC = () => {
 
     
     'Quarrying destroyed  parts of the historical GTS structure.',
-    ""
+
+    "",
 
     
    
