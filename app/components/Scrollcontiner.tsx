@@ -60,9 +60,9 @@ const ScrollImageSequence: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full  bg-neutral-100 overflow-hidden">
+    <div ref={containerRef} className="relative w-full   overflow-hidden">
       {/* Sticky image section */}
-      <div className="sticky top-0  w-full h-[90vh] flex items-center justify-center ">
+      <div className="sticky top-0  w-full h-[99vh] flex items-center justify-center ">
         <img
           ref={imageRef}
           src={images[currentImage]}
