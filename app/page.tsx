@@ -18,6 +18,7 @@ import Degradation from "./components/Degradation";
 import LayerReveal from "./components/LayerReveal ";
 import LayeredScroll from "./components/LayeredScroll";
 import ScrollytellingSection from "./components/ScrollytellingSection";
+import Scrollcontiner from "./components/Scrollcontiner";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -30,7 +31,7 @@ export default function Home() {
     Introduction: useRef(null),
     Place: useRef(null),
     History: useRef(null),
-    Degradation :useRef(null),
+    Degradation: useRef(null),
     Stakeholders: useRef(null),
     goal: useRef(null),
     Community: useRef(null),
@@ -78,7 +79,7 @@ export default function Home() {
 
   return (
     <main className="w-full h-full flex flex-col relative">
-      <BirdCursor/>
+      <BirdCursor />
       {/* Banner video */}
       <div className="w-full h-[80vh] relative overflow-hidden">
         <Banner />
@@ -161,88 +162,95 @@ export default function Home() {
 
           </div>
 
-          <StickyImageSection 
-           customstyle="h-[1800px] "
-          leftimg={true} 
-          images={<img
-            src="/GTS.png"
-            alt="image"
-            className="w-full h-full object-contain"
-          />}
-          content={
-            <div>
-              <h1 className="text-xl font-semibold color-b">The Sampigehalli Auxiliary Tower Station</h1>
-              <Bodytext text={
-                <span>
-                  The Sampigehalli Auxiliary Tower Station (SATS) overlooking Venkateshpura Lake, built in 1803, witnessed the Great Trigonometrical Survey (GTS) of India. It was one of the most ambitious scientific projects in history, designed to survey the Indian subcontinent. The GTS commenced in 1802 and took nearly a hundred years to complete. It mapped the entire Indian subcontinent, even measuring the Himalayan peaks and revealing to the world that Mt Everest was the tallest mountain ever.
-                </span>
-              } />
-              <Bodytext text={
-                <span ref={gtstextref}>
-                  Thousands of people worked on this project but the most remembered are William Lambton, George Everest and Andrew Waugh. It was Lambton, an English Infantry officer, with experience in surveying, who came up with the idea of developing an accurate map of India using a precise technique called triangulation, and his proposal soon set the GTS in motion. While his equipment was yet to arrive, Lambton decided to do a pilot survey in Bangalore, for which he needed to establish a trial baseline. He set out by establishing observation points across Bangalore, which aided in minimising observation and calculation errors. These points were the auxiliary stations and one was the SATS, which became one of the many principal stations for triangulation.
-                </span>
-              } />
-              <Bodytext text={
-                <span>
-                  A twelve-foot pillar, which was recorded as standing in the centre of the platform, is now missing. Only the deep circular pit at its base remains.
-                </span>
-              } />
-            </div>
+          <StickyImageSection
+            customstyle="h-[1800px] "
+            leftimg={true}
+            images={<img
+              src="/GTS.png"
+              alt="image"
+              className="w-full h-full object-contain"
+            />}
+            content={
+              <div>
+                <h1 className="text-xl font-semibold color-b">The Sampigehalli Auxiliary Tower Station</h1>
+                <Bodytext text={
+                  <span>
+                    The Sampigehalli Auxiliary Tower Station (SATS) overlooking Venkateshpura Lake, built in 1803, witnessed the Great Trigonometrical Survey (GTS) of India. It was one of the most ambitious scientific projects in history, designed to survey the Indian subcontinent. The GTS commenced in 1802 and took nearly a hundred years to complete. It mapped the entire Indian subcontinent, even measuring the Himalayan peaks and revealing to the world that Mt Everest was the tallest mountain ever.
+                  </span>
+                } />
+                <Bodytext text={
+                  <span ref={gtstextref}>
+                    Thousands of people worked on this project but the most remembered are William Lambton, George Everest and Andrew Waugh. It was Lambton, an English Infantry officer, with experience in surveying, who came up with the idea of developing an accurate map of India using a precise technique called triangulation, and his proposal soon set the GTS in motion. While his equipment was yet to arrive, Lambton decided to do a pilot survey in Bangalore, for which he needed to establish a trial baseline. He set out by establishing observation points across Bangalore, which aided in minimising observation and calculation errors. These points were the auxiliary stations and one was the SATS, which became one of the many principal stations for triangulation.
+                  </span>
+                } />
+                <Bodytext text={
+                  <span>
+                    A twelve-foot pillar, which was recorded as standing in the centre of the platform, is now missing. Only the deep circular pit at its base remains.
+                  </span>
+                } />
+              </div>
 
-          } />
-
-
+            } />
 
 
-          <StickyImageSection 
-          customstyle="h-[150vh] -mt-100"
-          leftimg={false} 
-          images={<img
-            src="/temple.png"
-            alt="image"
-            className="w-full h-full object-contain"
-          />}
-          content={
-            <div>
-              <h1 className="text-xl font-semibold color-b">Jarabandemma Temple</h1>
-              <Bodytext text={
-                <span>
-                 The <i>JaraBande Maramma Temple</i>, perched atop a rock by the waterbody, is a sacred space steeped in history and local tradition. Its origins are unclear, but it is thought to have been built during the Mysore kings’ reign, and was a resting place for soldiers on the move. Over time, it evolved into a sacred worship site, especially during the month of Shravan, when villagers gathered to pray for rain, offering <i>Ambali</i>, a millet-based dish.
 
-                </span>
-              } />
-              <Bodytext text={
-                <span>
-                  A natural cleft in the rock near the entrance, from where fresh water flows year-round, is seen as a miraculous gift. The Dasara festival features vital rituals, including animal sacrifices. Inside the temple, uncarved stones represent powerful protectors – <i>Jarubandemma, Akkayamma</i> and the <i>Saptamatheyaru</i> (Seven Divine Mothers) – reflecting the deep connection between the community, their faith and the land.  
 
-                </span>
-              } />
-              {/* <Bodytext text={
+          <StickyImageSection
+            customstyle="h-[150vh] -mt-100"
+            leftimg={false}
+            images={<img
+              src="/temple.png"
+              alt="image"
+              className="w-full h-full object-contain"
+            />}
+            content={
+              <div>
+                <h1 className="text-xl font-semibold color-b">Jarabandemma Temple</h1>
+                <Bodytext text={
+                  <span>
+                    The <i>JaraBande Maramma Temple</i>, perched atop a rock by the waterbody, is a sacred space steeped in history and local tradition. Its origins are unclear, but it is thought to have been built during the Mysore kings’ reign, and was a resting place for soldiers on the move. Over time, it evolved into a sacred worship site, especially during the month of Shravan, when villagers gathered to pray for rain, offering <i>Ambali</i>, a millet-based dish.
+
+                  </span>
+                } />
+                <Bodytext text={
+                  <span>
+                    A natural cleft in the rock near the entrance, from where fresh water flows year-round, is seen as a miraculous gift. The Dasara festival features vital rituals, including animal sacrifices. Inside the temple, uncarved stones represent powerful protectors – <i>Jarubandemma, Akkayamma</i> and the <i>Saptamatheyaru</i> (Seven Divine Mothers) – reflecting the deep connection between the community, their faith and the land.
+
+                  </span>
+                } />
+                {/* <Bodytext text={
                 <span>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias eos possimus dolores consequuntur veritatis voluptas quidem maxime voluptatem? Quae cumque, consequuntur sed natus nesciunt praesentium accusamus deleniti! Dicta, eos aliquid.
                 </span>
               } /> */}
-            </div>
+              </div>
 
-          } />
+            } />
 
 
 
-          
+
         </div>
 
       </div>
 
 
-      {/* degradation */}
-      <div ref={sectionRefs.Degradation } className='w-full h-auto px-[20vw]  -mt-20 bird-landing'>
-        <Heading text="degradation" />
-        {/* <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." /> */}       
+
+
+
+
+      {/*Degradation  */}
+      <div ref={sectionRefs.Degradation}>
+        <div className='w-full h-auto px-[20vw]   bird-landing'>
+          <Heading text="Degradation of the lake" />
+          <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
+
+
+        </div>
+        <div className="bird-landing-side">
+          <Scrollcontiner />
+        </div>
       </div>
-       <div>
-        <LayerReveal/>
-
-       </div>
 
 
 
@@ -251,27 +259,45 @@ export default function Home() {
 
 
 
-       {/* stakeholder */}
+
+
+
+
+
+
+
+
+
+
+      {/* degradation */}
+      {/* <div ref={sectionRefs.Degradation} className='w-full h-auto px-[20vw]  -mt-20 bird-landing'>
+        <Heading text="degradation" />
+        
+      </div> */}
+      {/* <div>
+        <LayerReveal />
+
+      </div> */}
+
+
+
+
+
+
+
+
+      {/* stakeholder */}
       <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
         <Heading text="Stakeholders" />
         <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
       </div>
-      <div  className="w-full h-[895px] mt-20 flex justify-start   relative ">
-         <SpotLight2/>        
-         
+      <div className="w-full h-[895px] mt-20 flex justify-start   relative ">
+        <SpotLight2 />
+
       </div>
 
 
-      {/*  */}
-     <div ref={sectionRefs.Stakeholders} className='w-full h-auto px-[20vw]  mt-[4595px] bird-landing'>
-        <Heading text="Stakeholders" />
-        <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
-
-       
-      </div>
-     <div>
-          {/* <ScrollytellingSection/> */}
-        </div>
+      
 
 
 

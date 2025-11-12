@@ -15,11 +15,11 @@ interface ScrollSection {
 
 const sections: ScrollSection[] = [
   {
-    id: 'intro',
-    title: 'The Beginning',
+    id: 'intro1',
+    title: 'The Beginning1',
     content: 'This is where our story starts. As you scroll, the visualization on the right will transform, creating an immersive narrative experience.',
     visualState: {
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: '/place.png',
       scale: 1,
       opacity: 1,
     },

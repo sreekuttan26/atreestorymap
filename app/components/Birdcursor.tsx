@@ -33,6 +33,7 @@ export default function BirdCursor() {
   // 🌿 Detect landing sections
   useEffect(() => {
     const sections = document.querySelectorAll('.bird-landing');
+    const sections_side = document.querySelectorAll('.bird-landing-side');
 
     sections.forEach((section) => {
       ScrollTrigger.create({
@@ -45,6 +46,24 @@ export default function BirdCursor() {
          onLeaveBack: flyBird,
       });
     });
+
+
+    sections_side.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top center',
+        end: 'bottom center',
+        onEnter: () => landBird_side(section as HTMLElement),
+        onLeave: flyBird,
+        onEnterBack: () => landBird(section as HTMLElement),
+         onLeaveBack: flyBird,
+      });
+    });
+
+
+
+
+
   }, []);
 
   const landBird = (section: HTMLElement) => {
@@ -55,6 +74,24 @@ export default function BirdCursor() {
 
     const rect = section.getBoundingClientRect();
     const perchX = rect.left + rect.width / 2;
+    const perchY = rect.top + 80;
+
+    gsap.to(bird, {
+      x: perchX,
+      y: perchY,
+      duration: 1,
+      ease: 'power3.out',
+    });
+  };
+
+  const landBird_side = (section: HTMLElement) => {
+    const bird = birdRef.current;
+    if (!bird) return;
+
+    setIsLanded(true);
+
+    const rect = section.getBoundingClientRect();
+    const perchX = rect.left + rect.width / 4;
     const perchY = rect.top + 80;
 
     gsap.to(bird, {
