@@ -15,7 +15,7 @@ const ScrollImageSequence: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   // Replace with your own images
-   const images = Array.from({ length: 9 }, (_, i) => `/${i + 1}Degradation.svg`);
+   const images = Array.from({ length: 9 }, (_, i) => `/${i + 1}Degradation.png`);
 
   const texts = [
     'With developmental activities, the lake had lost its natural connection with other lakes.',
