@@ -15,14 +15,35 @@ const ScrollImageSequence: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   // Replace with your own images
-   const images = Array.from({ length: 6 }, (_, i) => `/${i + 1}Degradation.svg`);
+   const images = Array.from({ length: 9 }, (_, i) => `/${i + 1}Degradation.svg`);
 
   const texts = [
-    'With burgeoning developmental activities, the lake had lost its natural connection with other lakes. ',
-    'Added to this was untreated sewage and solid waste, from plastic to construction debris, flowing into the lake.',
+    'With developmental activities, the lake had lost its natural connection with other lakes.',
+
+
+    'Untreated sewage released  into the lake from neighbouring buildings.',
+
+
+    'Plastic and cloth waste, construction debris, added to the deterioration of the lake.',
+
+
+    'Water hyacinth took over large parts of the lake.',
+
+
+    'Invasives like Lantana and Parthenium spread around the lake crippling the lake’s ecological balance.',
+
+    
+    'Large scale mining around the lake destroyed its natural rock formation.',
+
+    
     'The water turned stagnant and green with algal bloom, killing fishes and other aquatic life.',
-    'Besides the unchecked spread of water hyacinth and algae in the lake, the vegetation around the lake too had been taken over by invasives like Lantana and Parthenium, crippling the lake’s ecological balance.',
-    'Mining around the lake destroyed the natural rock formation by the lake – almost destroying the historical GTS structure – leaving behind a quarry that made way for debris and other waste.'
+
+    
+    'Quarrying destroyed  parts of the historical GTS structure.',
+    ""
+
+    
+   
   ];
 
   useEffect(() => {
@@ -65,7 +86,7 @@ const ScrollImageSequence: React.FC = () => {
       <div className="sticky top-0  w-full h-[99vh] flex items-center justify-center ">
         <img
           ref={imageRef}
-          src={images[currentImage]}
+          src={'degradation/'+images[currentImage]}
           alt="Scrolling scene"
           className="w-full h-full object-cover "
         />
@@ -76,14 +97,14 @@ const ScrollImageSequence: React.FC = () => {
         {texts.map((text, i) => (
           <div
             key={i}
-            className="text-box text-xl  leading-8  bg-[#a6af64] opacity-95 text-white backdrop-blur-sm rounded-2xl p-10 shadow-lg"
+            className={`text-box text-xl  leading-8  ${text.length>1?'bg-[#a6af64]  opacity-95 text-white backdrop-blur-sm rounded-2xl p-10 shadow-lg':''}`}
           >
             {text}
           </div>
         ))}
           <div ref={lastref}
             
-            className=""
+            className="text-box"
           >
             {""}
           </div>
