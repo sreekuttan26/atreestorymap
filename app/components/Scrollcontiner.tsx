@@ -104,7 +104,7 @@ const ScrollImageSequence: React.FC = () => {
         ))}
           <div ref={lastref}
             
-            className="text-box"
+            className=""
           >
             {""}
           </div>
