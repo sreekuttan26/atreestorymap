@@ -196,16 +196,34 @@ export default function Home() {
 
 
       {/* goal setting */}
-      <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 '>
-        <div className='w-full h-auto px-[20vw]  bird-landing'>
+      <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
+         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Goal Setting" />
           <Bodytext text="Following are the goals." />
         </div>
+        <div className='flex gap-5 mt-10'>
+           <img
+        src='/plusmap.png'
+
+        className="object-conatin h-[900px] px-10"
+        
+        
+        >
+          
+        </img>
+        <div>
+         
         <div className="">
           <StoryMapAccordion />
         </div>
+        </div>
+
+        </div>
+       
+        
 
       </div>
+      
 
 
 
