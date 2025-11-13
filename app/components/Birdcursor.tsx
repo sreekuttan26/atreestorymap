@@ -9,10 +9,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 type probs={
-  custom_style:string
+ 
+  showbird:boolean
 }
 
-export default function BirdCursor({custom_style}:probs) {
+export default function BirdCursor({showbird}:probs) {
   const birdRef = useRef<HTMLImageElement>(null);
   const [isLanded, setIsLanded] = useState(false);
 
@@ -117,7 +118,7 @@ export default function BirdCursor({custom_style}:probs) {
       ref={birdRef}
       src={isLanded ? '/bird-sit.gif' : '/bird-fly.gif'}
       alt="bird cursor"
-      className={`  pointer-events-none z-[9999] select-none fixed ${custom_style}`}
+      className={`  pointer-events-none z-[9999] select-none  w-40 h-40 ${showbird?'fixed':'hidden'}`}
       style={{
         transform: 'translate(-50%, -50%)',
       }}

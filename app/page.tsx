@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
 
-  const [birdstyle, setbirdstyle] = useState('w-0 h-0')
+  const[showbird , setshowbird]=useState(false)
 
 
   const [activesection, setActiveSection] = useState("")
@@ -87,7 +87,7 @@ export default function Home() {
 
   return (
     <main className="w-full h-full flex flex-col relative">
-      <BirdCursor custom_style={birdstyle} />
+      <BirdCursor showbird={showbird} />
       {/* Banner video */}
       <div className="w-full h-[80vh] relative overflow-hidden">
         <Banner />
@@ -151,7 +151,7 @@ export default function Home() {
           <History_gts />
 
         </div>
-        
+
 
       </div>
 
@@ -199,11 +199,45 @@ export default function Home() {
       <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 '>
         <div className='w-full h-auto px-[20vw]  bird-landing'>
           <Heading text="Goal Setting" />
-          <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
+          <Bodytext text="Following are the goals." />
         </div>
-        <div>
+        <div className="">
           <StoryMapAccordion />
         </div>
+
+      </div>
+
+
+
+
+
+
+{/* mascot */}
+      <div className="w-full h-full px-[20vw] mt-20">
+        <h1 className="text-xl font-semibold color-b">Choosing our mascot- The Pied kingfisher</h1>
+        <div className='w-full flex gap-2 items-center mt-10'>
+          <div className='h-[400px] w-[1800px]  bg-gray-100 rounded-2xl shadow-xl flex flex-col items-center justify-center object-center'>
+            <img
+
+              src='/bird-sit.gif'
+              alt="bird cursor"
+              className={`object-contain object-top  ${showbird?'hidden':'flex'}`}
+              
+              ></img>
+              <p className={` ${showbird?'hidden':'flex'} text-gray-400 -mt-10 cursor-pointer `} onClick={()=>{ setshowbird(!showbird)}}> Click to unlock me 🔒</p>
+              <p className={` ${showbird?'flex':'hidden'} text-gray-400 -mt-10 cursor-pointer `} onClick={()=>{ setshowbird(!showbird)}}> Click to lock me 🔒</p>
+          </div>
+          <div className="px-4">
+            <Bodytext text={
+              <span>
+                 The Pied Kingfisher, a striking black-and-white bird  – seeks clear lakes and rivers , diving effortlessly in pursuit of fish and other aquatic prey. However, as pollution clouded the waters of Venkateshpura Lake and stagnant conditions prevailed, the Pied kingfisher, which was once seen here, disappeared. Hence it was decided to choose Pied kingfisher as the indicator species for lake health.
+              </span>
+            }/>
+           
+
+          </div>
+        </div>
+
 
       </div>
 

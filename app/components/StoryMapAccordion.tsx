@@ -21,10 +21,10 @@ const storySections: StorySection[] = [
                     This can be achived by the following steps.
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Control sewage flow and waste dumping</strong> reveal sophisticated trade networks</li>
-                    <li><strong>Ensure flow between lakes- inlet/ outlet</strong> tell tales of daily life and religious practices</li>
-                    <li><strong>Install nature based solutions like aerator, floating island</strong> were more complex than previously thought</li>
-                    <li><strong>Regular community driven/ automated water quality monitoring</strong> were more complex than previously thought</li>
+                    <li><strong>Control sewage flow and waste dumping</strong> </li>
+                    <li><strong>Ensure flow between lakes- inlet/ outlet</strong></li>
+                    <li><strong>Install nature based solutions like aerator, floating island</strong> </li>
+                    <li><strong>Regular community driven/ automated water quality monitoring</strong> </li>
                 </ul>
                 
             </div>
@@ -44,7 +44,9 @@ const storySections: StorySection[] = [
                     This can be achived by the following steps.
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong> Create uncemented( natural) walking paths with native species to bring back biodiversity</strong> </li>
+                    <li><strong> Remove Lantana and other weeds.</strong> </li>
+                    <li><strong> Create uncemented( natural) walking paths with native species to bring back biodiversity.</strong> </li>
+                    <li><strong> Plant native species suitable for the landscape.</strong> </li>
                    
                 </ul>
                 
@@ -67,10 +69,10 @@ const storySections: StorySection[] = [
                     This can be achived by the following steps.
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Control sewage flow and waste dumping</strong> reveal sophisticated trade networks</li>
-                    <li><strong>Ensure flow between lakes- inlet/ outlet</strong> tell tales of daily life and religious practices</li>
-                    <li><strong>Install nature based solutions like aerator, floating island</strong> were more complex than previously thought</li>
-                    <li><strong>Regular community driven/ automated water quality monitoring</strong> were more complex than previously thought</li>
+                    <li><strong>Install bee resorts to support pollinator diversity.</strong> </li>
+                    <li><strong>Grow food plants for Solitary bees.</strong> </li>
+                    <li><strong>Create a habitat for butterflies</strong> </li>
+                   
                 </ul>
                 
             </div>
@@ -92,10 +94,9 @@ const storySections: StorySection[] = [
                     This can be achived by the following steps.
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Control sewage flow and waste dumping</strong> reveal sophisticated trade networks</li>
-                    <li><strong>Ensure flow between lakes- inlet/ outlet</strong> tell tales of daily life and religious practices</li>
-                    <li><strong>Install nature based solutions like aerator, floating island</strong> were more complex than previously thought</li>
-                    <li><strong>Regular community driven/ automated water quality monitoring</strong> were more complex than previously thought</li>
+                    <li><strong>Stop rock quarrying in the vicinity.</strong> </li>
+                    <li><strong>Create awareness about the historical structure.</strong> </li>
+                    <li><strong>Prevent further encroachments.</strong> </li>
                 </ul>
                 
             </div>
@@ -116,10 +117,13 @@ const storySections: StorySection[] = [
                     This can be achived by the following steps.
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Control sewage flow and waste dumping</strong> reveal sophisticated trade networks</li>
-                    <li><strong>Ensure flow between lakes- inlet/ outlet</strong> tell tales of daily life and religious practices</li>
-                    <li><strong>Install nature based solutions like aerator, floating island</strong> were more complex than previously thought</li>
-                    <li><strong>Regular community driven/ automated water quality monitoring</strong> were more complex than previously thought</li>
+                    <li><strong>Conduct community activities to encourage greater interaction with the lake.</strong> </li>
+                    <li><strong>Familiarise people with different taxa through nature walks and trails.</strong> </li>
+                    <li><strong>Organise focused activities for school children.</strong> </li>
+                    <li><strong>Design a socio-ecological system that balances people’s need with biodiversity conservation.</strong> </li>
+                    <li><strong>Install informative signages to facilitate meaningful interaction with the lake.</strong> </li>
+                    <li><strong>Arrange security services to watch over the lake.</strong> </li>
+                    <li><strong>Form a lake-support WhatsApp group to connect local residents and coordinate activities.</strong> </li>
                 </ul>
                 
             </div>
@@ -138,7 +142,7 @@ export default function StoryMapAccordion() {
     };
 
     return (
-        <div className="min-h-screen  px-6">
+        <div className="  px-6">
             <div className="max-w-4xl mx-auto mt-10">
 
 
@@ -182,7 +186,7 @@ export default function StoryMapAccordion() {
 
                                 {/* Accordion Content */}
                                 <div
-                                    className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                                    className={`transition-all duration-300 ease-in-out ${isOpen ? ' opacity-100' : 'h-0  hidden opacity-0'
                                         }`}
                                     style={{ overflow: 'hidden' }}
                                 >
