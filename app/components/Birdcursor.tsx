@@ -80,7 +80,7 @@ export default function BirdCursor({showbird}:probs) {
     setIsLanded(true);
 
     const rect = section.getBoundingClientRect();
-    const perchX = rect.left + rect.width / 2;
+    const perchX =  rect.width / 2-50;
     const perchY = rect.top + 80;
 
     gsap.to(bird, {

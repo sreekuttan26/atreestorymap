@@ -52,7 +52,7 @@ const SpotLight2 = () => {
             case "researcher":
                 return { x: "42%", y: "55%" };
             case "gov":
-                return { x: "35%", y: "80%" };
+                return { x: "34%", y: "95%" };
             default:
                 return { x: "5%", y: "100%" }; 
         }
@@ -377,7 +377,7 @@ const SpotLight2 = () => {
                     <div ref={box3Ref}>
                         <Image
                             alt="img1"
-                            src="/fisher.png"
+                            src="/fisher_1.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"

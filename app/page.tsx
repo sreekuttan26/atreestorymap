@@ -234,12 +234,12 @@ export default function Home() {
       <div className="w-full h-full px-[20vw] mt-20">
         <h1 className="text-xl font-semibold color-b">Choosing our mascot- The Pied kingfisher</h1>
         <div className='w-full flex gap-2 items-center mt-10'>
-          <div className='h-[400px] w-[1800px] cursor-pointer bg-gray-100 rounded-2xl shadow-xl flex flex-col items-center justify-center object-center'  onClick={() => { setshowbird(!showbird) }}>
+          <div className='h-[300px] w-[1800px] cursor-pointer bg-gray-100 rounded-2xl shadow-xl flex flex-col items-center justify-center object-center'  onClick={() => { setshowbird(!showbird) }}>
             <img
 
               src='/bird-sit.gif'
               alt="bird cursor"
-              className={`object-contain object-top  ${showbird ? 'hidden' : 'flex'}`}
+              className={`object-contain h-[200px] object-top  ${showbird ? 'hidden' : 'flex'}`}
 
             ></img>
             <p className={` ${showbird ? 'hidden' : 'flex'} text-gray-400 -mt-10 cursor-pointer `} onClick={() => { setshowbird(!showbird) }}> Click to unlock me 🔒</p>
