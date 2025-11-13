@@ -191,13 +191,13 @@ export default function StoryMapAccordion() {
                                     style={{ overflow: 'hidden' }}
                                 >
                                     <div className="p-6">
-                                        {section.imageUrl && (
+                                        {/* {section.imageUrl && (
                                             <img
                                                 src={section.imageUrl}
                                                 alt={section.title}
                                                 className="w-full h-64 object-cover rounded-lg mb-4"
                                             />
-                                        )}
+                                        )} */}
 
                                         <div className="flex items-center gap-2 text-sm text-slate-600 mb-4">
 
