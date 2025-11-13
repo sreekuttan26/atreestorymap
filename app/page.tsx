@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
 
-  const[showbird , setshowbird]=useState(false)
+  const [showbird, setshowbird] = useState(false)
 
 
   const [activesection, setActiveSection] = useState("")
@@ -197,40 +197,40 @@ export default function Home() {
 
       {/* goal setting */}
       <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
-         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Goal Setting" />
           <Bodytext text="Following are the goals." />
         </div>
         <div className='flex gap-5 mt-10'>
-           <img
-        src='/plusmap.png'
+          <img
+            src='/plusmap.png'
 
-        className="object-conatin h-[900px] px-10"
-        
-        
-        >
-          
-        </img>
-        <div>
-         
-        <div className="">
-          <StoryMapAccordion />
-        </div>
-        </div>
+            className="object-conatin h-[800px] px-10"
+
+
+          >
+
+          </img>
+          <div>
+
+            <div className="">
+              <StoryMapAccordion />
+            </div>
+          </div>
 
         </div>
-       
-        
+
+
 
       </div>
-      
 
 
 
 
 
 
-{/* mascot */}
+
+      {/* mascot */}
       <div className="w-full h-full px-[20vw] mt-20">
         <h1 className="text-xl font-semibold color-b">Choosing our mascot- The Pied kingfisher</h1>
         <div className='w-full flex gap-2 items-center mt-10'>
@@ -239,19 +239,19 @@ export default function Home() {
 
               src='/bird-sit.gif'
               alt="bird cursor"
-              className={`object-contain object-top  ${showbird?'hidden':'flex'}`}
-              
-              ></img>
-              <p className={` ${showbird?'hidden':'flex'} text-gray-400 -mt-10 cursor-pointer `} onClick={()=>{ setshowbird(!showbird)}}> Click to unlock me 🔒</p>
-              <p className={` ${showbird?'flex':'hidden'} text-gray-400 -mt-10 cursor-pointer `} onClick={()=>{ setshowbird(!showbird)}}> Click to lock me 🔒</p>
+              className={`object-contain object-top  ${showbird ? 'hidden' : 'flex'}`}
+
+            ></img>
+            <p className={` ${showbird ? 'hidden' : 'flex'} text-gray-400 -mt-10 cursor-pointer `} onClick={() => { setshowbird(!showbird) }}> Click to unlock me 🔒</p>
+            <p className={` ${showbird ? 'flex' : 'hidden'} text-gray-400 -mt-10 cursor-pointer `} onClick={() => { setshowbird(!showbird) }}> Click to lock me 🔒</p>
           </div>
           <div className="px-4">
             <Bodytext text={
               <span>
-                 The Pied Kingfisher, a striking black-and-white bird  – seeks clear lakes and rivers , diving effortlessly in pursuit of fish and other aquatic prey. However, as pollution clouded the waters of Venkateshpura Lake and stagnant conditions prevailed, the Pied kingfisher, which was once seen here, disappeared. Hence it was decided to choose Pied kingfisher as the indicator species for lake health.
+                The Pied Kingfisher, a striking black-and-white bird  – seeks clear lakes and rivers , diving effortlessly in pursuit of fish and other aquatic prey. However, as pollution clouded the waters of Venkateshpura Lake and stagnant conditions prevailed, the Pied kingfisher, which was once seen here, disappeared. Hence it was decided to choose Pied kingfisher as the indicator species for lake health.
               </span>
-            }/>
-           
+            } />
+
 
           </div>
         </div>
