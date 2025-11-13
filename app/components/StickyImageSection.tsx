@@ -11,7 +11,7 @@ type probs={
 
 export default function StickyImageSection({content, images, leftimg, customstyle}:probs) {
   return (
-    <section className={`flex ${leftimg?"md:flex-row":"md:flex-row-reverse"} flex-col justify-start gap-5 -mt-40 ${customstyle}  `}>
+    <section className={`flex ${leftimg?"md:flex-row":"md:flex-row-reverse"} flex-col justify-start gap-5 -mt-40 ${customstyle} relative `}>
       {/* Image Section */}
     <div className="md:w-1/2 w-full h-screen sticky top-0 flex flex-col items-start justify-start">
   {images}

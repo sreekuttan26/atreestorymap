@@ -56,17 +56,17 @@ const Place = () => {
     }, [])
 
     return (
-        <div className="w-full h-full flex relative">
-            <div ref={imgref} className="w-full h-full flex items-center justify-center  ">
+        <div className="w-full h-full flex flex-col relative ">
+            <div ref={imgref} className="w-full h-full flex  absolute top-0 left-0 ">
                 <img
                     src="/svg/Place_map.svg"
                     alt="place"
                 
-                    className="object-conatin w-[65%] h-full"
+                    className="object-conatin w-[75%] h-[500px] "
 
                 />
                 {/* overlay */}
-                <div className="absolute w-full h-full top-0 left-0 bg-black opacity-0"></div>
+                {/* <div className="absolute w-full h-full top-0 left-0 bg-black opacity-0"></div> */}
 
             </div>
 
@@ -74,7 +74,7 @@ const Place = () => {
 
 
             {/* containers */}
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-40 pt-50 items-end px-20 ">
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col gap-40 pt-50 items-end px-20  ">
                 <div ref={box0ref} className="bg-white p-4  w-[500px] flex flex-col rounded-xl opacity-90 gap-5">
                     <div className="w-full h-[200px] relative ">
                         <Image

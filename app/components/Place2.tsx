@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-const SpotLight2 = () => {
+const Place2 = () => {
     const imgRef = useRef<HTMLDivElement>(null);
     const imgRef2 = useRef<HTMLDivElement>(null);
     const img_overlay = useRef<HTMLDivElement>(null);
@@ -260,11 +260,11 @@ const SpotLight2 = () => {
 
 
             {/* Dimmed base image */}
-            <div ref={imgRef2} className="absolute top-0 left-0 w-full h-[700px] flex items-center justify-start z-0 ">
+            <div ref={imgRef} className="absolute top-0 left-0 w-full h-[700px] flex items-center justify-start z-0 ">
                 <img
-                    src="stakeholders.png"
+                    src="/svg/Place_map.svg"
                     alt="dimmed"
-                    className={`object-contain w-[60%] h-full ${brightness} opacity-40 pl-20`}
+                    className={`object-contain w-[80%] h-full   pl-20`}
                 />
             </div>
 
@@ -275,7 +275,7 @@ const SpotLight2 = () => {
 
 
 
-            <div ref={imgRef}
+            {/* <div ref={imgRef}
                 className={`absolute top-0 left-0 w-full h-[700px]  items-center justify-start z-10 ${currentspot === images[0] ? "flex" : "flex"}`}
 
                 style={{
@@ -302,7 +302,7 @@ const SpotLight2 = () => {
 
 
 
-            </div>
+            </div> */}
 
 
 
@@ -330,7 +330,7 @@ const SpotLight2 = () => {
 
             {/* Content boxes */}
             <div className="relative z-20 flex flex-col gap-20 pt-40 items-end px-20 w-full ">
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200  ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200  ">
                     <div ref={box0Ref}>
                         <Image
                             alt="img1"
@@ -341,11 +341,11 @@ const SpotLight2 = () => {
                         />
                     </div>
 
-                    <h1 className="text-lg font-semibold mt-3">Biodiversity</h1>
-                    <p className="">Venkateshpura Lake – stagnant and overrun by invasives and waste, still supported life. Grey-headed swamphens, Eurasian coots and Black-winged stilts went about their business as usual, while a few cormorants lingered. Introduced fish survived though native ones had vanished. Rock agamas basked, geckos slipped through crevices, butterflies flitted and keelbacks rippled the water. The lake’s flora was dominated by invasives.</p>
+                    <h1 className="text-lg font-semibold mt-3"></h1>
+                        <p>Venkateshpura Lake is a relatively small lake, extending a little over 10 acres. It is managed by the Bruhat Bangalore Mahanagara Palike (BBMP), Bengaluru’s civic body. Located in Sampigehalli in the Arkavathy Layout of Jakkur Ward, the lake is sometimes more familiar to the locals as Sampigehalli Lake, its old name</p>
                 </div>
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200  ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200  ">
                     <div ref={box1Ref}>
                         <Image
                             alt="img1"
@@ -355,11 +355,11 @@ const SpotLight2 = () => {
                             className="object-cover rounded-lg"
                         />
                     </div>
-                    <h1 className="text-lg font-semibold mt-3">Migrants</h1>
-                    <p>Venkateshpura Lake, open and unfenced, served everyone, including migrants in that part of Bengaluru city, who otherwise had to scout around for water to wash their clothes and vessels. Little children were always up for a quick dip, especially with plenty of rocks serving as diving boards.</p>
+                    <h1 className="text-lg font-semibold mt-3"></h1>
+                    <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment area that leads to Hebbala Nagara Valley, one of the five valleys of Bangalore. Being at the apex of a series of lakes, its outlet joins Rachenahalli Lake on the downstream.</p>
                 </div>
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200 ">
                     <div ref={box2Ref}>
                         <Image
                             alt="img1"
@@ -369,10 +369,10 @@ const SpotLight2 = () => {
                             className="object-cover rounded-lg"
                         />
                     </div>
-                    <h1 className="text-lg font-semibold mt-3">Pastoralists</h1>
-                    <span>The grassland flanking Venkateshpura Lake had been the grazing grounds, known locally as <i>gomala</i>, had long served as a grazing ground for livestock. It was among the last remaining patches in the neighbourhood with easy access to grass and water. Pastoralists who brought their livestock here not only sustained their livelihoods but supplied milk to the surrounding city.</span>
+                    <h1 className="text-lg font-semibold mt-3"></h1>
+                         <p>There is a ruggedness to the lake’s identity that comes from the rocky outgrowth both within it and along its periphery. Most of the rock faces that covered the lake are gone. Only the rocky projection bearing the nineteenth-century Sampigehalli Auxiliary Tower Station stands to tell a story. Adjacent to the waterbody is the Jarabandemma Temple, built on a rock, which holds unique significance due to the distinct rituals observed there even today. The lake stands in the neighbourhood, amid towering buildings, as a testament to the struggle put up by many of the residents who live around it.</p>
                 </div>
-
+{/* 
                 <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
                     <div ref={box3Ref}>
                         <Image
@@ -386,9 +386,9 @@ const SpotLight2 = () => {
                     <h1 className="text-lg font-semibold mt-3">Fisher folk</h1>
                     <p>Venkateshpura Lake, a traditional fishing ground, is periodically leased by the municipal body to local fisherfolk. The current leaseholder had stocked the lake with commercial fishes, such as Rohu and Catla. But the dense algal bloom and pollution rendered even these resilient fish vulnerable. As the lake’s health declined, so too did the fisherman’s fragile livelihood.
 </p>
-                </div>
+                </div> */}
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
+                {/* <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
                     <div ref={box4Ref}>
                         <Image
                             alt="img1"
@@ -436,7 +436,7 @@ const SpotLight2 = () => {
                     </div>
 
 
-                </div>
+                </div> */}
                 {/* end box */}
                 <div ref={boxendRef} className=" p-4 w-[500px] rounded-xl opacity-90 "></div>
             </div>
@@ -446,4 +446,4 @@ const SpotLight2 = () => {
     );
 };
 
-export default SpotLight2;
+export default Place2;

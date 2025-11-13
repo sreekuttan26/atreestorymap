@@ -4,9 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 
-export default function BirdCursor() {
+type probs={
+  custom_style:string
+}
+
+export default function BirdCursor({custom_style}:probs) {
   const birdRef = useRef<HTMLImageElement>(null);
   const [isLanded, setIsLanded] = useState(false);
 
@@ -111,7 +117,7 @@ export default function BirdCursor() {
       ref={birdRef}
       src={isLanded ? '/bird-sit.gif' : '/bird-fly.gif'}
       alt="bird cursor"
-      className="fixed w-48 h-48 pointer-events-none z-[9999] select-none"
+      className={`  pointer-events-none z-[9999] select-none fixed ${custom_style}`}
       style={{
         transform: 'translate(-50%, -50%)',
       }}
