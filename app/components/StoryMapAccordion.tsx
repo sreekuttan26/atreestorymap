@@ -154,12 +154,12 @@ export default function StoryMapAccordion() {
                         return (
                             <div
                                 key={section.id}
-                                className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+                                className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl "
                             >
                                 {/* Accordion Header */}
                                 <button
                                     onClick={() => toggleSection(section.id)}
-                                    className="w-full px-6 py-5 flex items-center justify-between"
+                                    className="w-full px-6 py-5 flex items-center justify-between cursor-pointer"
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="w-10 h-10 rounded-full bg-[#087f9b] text-white flex items-center justify-center font-bold text-lg">

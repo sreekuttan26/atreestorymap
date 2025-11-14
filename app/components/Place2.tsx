@@ -44,7 +44,7 @@ const Place2 = () => {
             case "migrant":
                 return { x: "8%", y: "50%" };
             case "pastorials":
-                return { x: "18%", y: "68%" };
+                return { x: "18%", y: "75%" };
             case "fisher":
                 return { x: "30%", y: "40%" };
             case "residents":

@@ -7,6 +7,6 @@ export const nav_items = [
   { name: "Stakeholders", link: "/about" },
   { name: "Goal Setting", link: "/about" },
   { name: "Restoration", link: "/about" },
-  { name: "Transformation ", link: "/about" },
+  { name: "Transformation", link: "/about" },
   { name: "Resources ", link: "/about" },
 ]

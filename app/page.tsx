@@ -24,6 +24,7 @@ import Place2 from "./components/Place2";
 import History from "./components/History";
 import Kempegowda from "./components/Kempegowda";
 import History_gts from "./components/History_gts";
+import Restoration from "./components/Restoration";
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -42,8 +43,9 @@ export default function Home() {
     Degradation: useRef(null),
     Stakeholders: useRef(null),
     Goal_Setting: useRef(null),
-    Community: useRef(null),
-    community: useRef(null),
+    Restoration: useRef(null),
+    Transformation: useRef(null),
+    Resources: useRef(null),
   };
 
   const gtsimgref = useRef(null)
@@ -263,6 +265,71 @@ export default function Home() {
 
 
 
+
+
+         {/* Restoration */}
+      <div ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col '>
+        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+          <Heading text="Restoration" />
+          <Bodytext text="Venkateshpura Lake presented several challenges, and addressing them needed to be done step by step." />
+        </div>
+        
+        <div className="w-full px-[20vw]">
+          <Restoration/>
+
+        </div>
+       
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         {/* Transformation */}
+      <div ref={sectionRefs.Transformation} className='w-full h-full mt-40 flex flex-col '>
+        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+          <Heading text="Transformation" />
+          <Bodytext text="Following are the goals." />
+        </div>
+       
+
+
+
+      </div>
+
+
+
+
+
+         {/* Resources */}
+      <div ref={sectionRefs.Transformation} className='w-full h-full mt-40 flex flex-col '>
+        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+          <Heading text="Resources" />
+          <Bodytext text="Following are the goals." />
+        </div>
+       
+
+
+
+      </div>
+
+
+
+
+
       {/* <div className="border-2" onClick={(e) => { setbirdstyle("") }}>Fly bird</div> */}
 
 
@@ -278,7 +345,7 @@ export default function Home() {
 
 
 
-      <div className="w-full h-[10000px]"> </div>
+      <div className="w-full h-[10000px] hidden"> </div>
 
 
     </main>
