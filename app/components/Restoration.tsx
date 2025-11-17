@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import Bodytext from './Bodytext';
+import VideoPlayer from './VideoPlayer';
 
 interface Step {
     id: number;
@@ -37,11 +38,15 @@ const Restoration = () => {
                     />
 
                     <h1 className="color-b text-lg font-bold mt-20">Biodiversity</h1>
-                    <iframe
-                        src="https://drive.google.com/file/d/13BoQjaYGYMt1Kxjpgzg7uPYUmgzDjBiX/preview"  
-                        className="w-full h-[450px] rounded-xl"
-                        allow="autoplay"
-                    ></iframe>
+                  <video
+                            src="https://resourcespace.atree.org/pages/download.php?ref=150&size=pre&ext=mp4&page=1&alternative=-1&watermarked=&k=63ce0f2d98&noattach=true&v=1763372426"
+                            className="w-full h-[850px] rounded-xl object-cover"
+                            
+                            muted
+                            playsInline
+                            controls
+                               // optional custom thumbnail
+                        />
                     <Bodytext
                         text={
                             <p>
@@ -137,14 +142,36 @@ const Restoration = () => {
                         allowFullScreen
                     />
                     <Bodytext text={<p>Uncemented walking trails encouraged slower, mindful walking and allowed vegetation to flourish along the route.</p>} />
-
                     <h1 className="color-b text-lg font-bold mt-20">Creatures on canvas</h1>
-                      <iframe
-                        src="https://drive.google.com/file/d/1uNKuKJtSRIwIF8Uw7xPbvY2iUAAsGXQb/preview"  
-                        className="w-full h-[450px] rounded-xl"
-                        allow="autoplay"
-                    ></iframe>
-                    <Bodytext text={<p>Construction waste was repurposed as canvases to showcase the lake’s biodiversity.</p>} />
+
+                    <div className="flex gap-4 items-center justify-center  ">
+                      
+
+                        <video
+                            src="https://www.atree.org/wp-content/uploads/2025/11/creatures-on-canvas.mp4"
+                            className="w-full h-[850px] rounded-xl object-contain"
+                            
+                            muted
+                            playsInline
+                            controls
+                               // optional custom thumbnail
+                        />
+
+
+
+
+
+
+
+
+
+
+
+
+                        <Bodytext text={<p className='items-center justify-center '>Construction waste was repurposed as canvases to showcase the lake’s biodiversity.</p>} />
+                    </div>
+
+
                 </span>
             )
         },
