@@ -25,6 +25,7 @@ import History from "./components/History";
 import Kempegowda from "./components/Kempegowda";
 import History_gts from "./components/History_gts";
 import Restoration from "./components/Restoration";
+import BeforeAfterSlider from "./components/BeforeAfterSlider";
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -201,7 +202,7 @@ export default function Home() {
       <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Goal Setting" />
-          <Bodytext text="Following are the goals." />
+          <Bodytext text="A vision of our restored lake" />
         </div>
         <div className='flex gap-5 mt-10'>
           <img
@@ -303,6 +304,10 @@ export default function Home() {
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Transformation" />
           <Bodytext text="Following are the goals." />
+        </div>
+
+        <div>
+          <BeforeAfterSlider/>
         </div>
        
 
