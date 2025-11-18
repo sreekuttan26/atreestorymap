@@ -163,7 +163,7 @@ export default function Trandformation() {
             <img
                 src={imageLoaded}
 
-                className="object-conatin h-[700px] w-[1100px] px-10"
+                className="object-conatin h-[700px] w-[780px] px-10"
 
 
             >
@@ -173,7 +173,7 @@ export default function Trandformation() {
 
                 <div className="">
 
-                    <div className="   px-6">
+                    <div className="   px-4">
                         <div className="max-w-4xl mx-auto mt-10 w-full">
 
 

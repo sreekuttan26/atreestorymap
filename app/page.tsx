@@ -127,7 +127,7 @@ export default function Home() {
 
 
       {/* introduction */}
-      <div ref={sectionRefs.Introduction} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
+      <div id='#introduction' ref={sectionRefs.Introduction} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
         <Heading text="Introduction" />
         <Bodytext text="This is a story of Venkateshpura Lake – a modest freshwater lake tucked away in the northern part of Bengaluru, a story of how the lake lost its vitality as human development took precedence. Over time, it turned into a stagnant, degraded water body, until one day, a few concerned citizens decided to bring it back to life, not just for the lake’s sake, but for their own. " />
       </div>
@@ -135,7 +135,7 @@ export default function Home() {
 
 
       {/* Place */}
-      <div ref={sectionRefs.Place}>
+      <div id='#place' ref={sectionRefs.Place}>
         <div className='w-full h-auto px-[20vw]  mt-20 bird-flying'>
           <Heading text="Place" />
           <Bodytext text="Where is Venkateshpura lake? " />
@@ -150,7 +150,7 @@ export default function Home() {
 
 
       {/* history */}
-      <div ref={sectionRefs.History} className='w-full h-auto px-[20vw] mt-20 bird-landing'>
+      <div id='#history' ref={sectionRefs.History} className='w-full h-auto px-[20vw] mt-20 bird-landing'>
         {/* mt-[1425px] */}
         <Heading text="History" />
         <Bodytext text="There is little by way of origin story for Venkateshpura Lake. But some little legends from history lend a narrative. Here is one such." />
@@ -179,7 +179,7 @@ export default function Home() {
 
 
       {/*Degradation  */}
-      <div ref={sectionRefs.Degradation} className=' mt-30' >
+      <div id='#degradation' ref={sectionRefs.Degradation} className=' mt-30' >
         <div className='w-full h-auto px-[20vw]    bird-landing'>
           <Heading text="Degradation of the lake" />
           <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
@@ -198,7 +198,7 @@ export default function Home() {
 
 
       {/* stakeholder */}
-      <div ref={sectionRefs.Stakeholders}>
+      <div id='#stakeholders' ref={sectionRefs.Stakeholders}>
         <div className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
           <Heading text="Stakeholders" />
           <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
@@ -214,7 +214,7 @@ export default function Home() {
 
 
       {/* goal setting */}
-      <div ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
+      <div id='#goal' ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Goal Setting" />
           <Bodytext text="A vision of our restored lake" />
@@ -284,7 +284,7 @@ export default function Home() {
 
 
          {/* Restoration */}
-      <div ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col  '>
+      <div id='#restoration' ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col  '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Restoration" />
           <Bodytext text="Venkateshpura Lake presented several challenges, and addressing them needed to be done step by step." />

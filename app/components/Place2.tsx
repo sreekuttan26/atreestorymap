@@ -334,7 +334,7 @@ const Place2 = () => {
                     <div ref={box0Ref}>
                         <Image
                             alt="img1"
-                            src="/place_1.png"
+                            src="/lake_sky.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -349,7 +349,7 @@ const Place2 = () => {
                     <div ref={box1Ref}>
                         <Image
                             alt="img1"
-                            src="/place__2.png"
+                            src="/place_1.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -359,11 +359,11 @@ const Place2 = () => {
                     <p>The estimated water spread is 8 acres. Venkateshpura Lake has an independent catchment area that leads to Hebbala Nagara Valley, one of the five valleys of Bangalore. Being at the apex of a series of lakes, its outlet joins Rachenahalli Lake on the downstream.</p>
                 </div>
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200 ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200 shadow-2xl">
                     <div ref={box2Ref}>
                         <Image
                             alt="img1"
-                            src="/place_3.png"
+                            src="/place__3.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
