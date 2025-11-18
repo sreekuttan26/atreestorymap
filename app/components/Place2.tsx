@@ -334,7 +334,7 @@ const Place2 = () => {
                     <div ref={box0Ref}>
                         <Image
                             alt="img1"
-                            src="/biodiversity.png"
+                            src="/lake_sky.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -349,7 +349,7 @@ const Place2 = () => {
                     <div ref={box1Ref}>
                         <Image
                             alt="img1"
-                            src="/migrant.jpg"
+                            src="/lake_drone.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -363,7 +363,7 @@ const Place2 = () => {
                     <div ref={box2Ref}>
                         <Image
                             alt="img1"
-                            src="/pastorial_1.png"
+                            src="/lake_gts.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"

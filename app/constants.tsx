@@ -1,12 +1,12 @@
 export const nav_items = [
-  { name: "Introduction", link: "/" },
-  { name: "Place", link: "/about" },
-  { name: "History", link: "/about" },
-  { name: "Degradation", link: "/about" },
+  { name: "Introduction", link: "#introduction" },
+  { name: "Place", link: "#place" },
+  { name: "History", link: "#history" },
+  { name: "Degradation", link: "#degradation" },
 
-  { name: "Stakeholders", link: "/about" },
-  { name: "Goal Setting", link: "/about" },
-  { name: "Restoration", link: "/about" },
-  { name: "Transformation", link: "/about" },
-  { name: "Resources", link: "/about" },
+  { name: "Stakeholders", link: "#stakeholders" },
+  { name: "Goal Setting", link: "#goal" },
+  { name: "Restoration", link: "#restoration" },
+  { name: "Transformation", link: "#transformation" },
+  { name: "Resources", link: "#resources" },
 ]

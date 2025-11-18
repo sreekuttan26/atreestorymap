@@ -406,7 +406,7 @@ const SpotLight2 = () => {
                     <div ref={box5Ref}>
                         <Image
                             alt="img1"
-                            src="/place.png"
+                            src="/researcher.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"

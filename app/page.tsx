@@ -88,6 +88,19 @@ export default function Home() {
   }, [activesection])
 
 
+  const scrollWithOffset = (id: string, offset: number = 100) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
+  };
+
+
 
   return (
     <main className="w-full h-full flex flex-col relative">
@@ -102,8 +115,9 @@ export default function Home() {
       {/* navigation menu */}
       <div className="w-full h-[100px] bg-gray-100 shadow-xl flex gap-5 justify-evenly items-center sticky top-0 cursor-pointer z-50 bird-landing">
         {nav_items.map((nav, index) => (
-          <div key={index} className={`text-lg hover:underline hover:font-bold ${activesection === nav.name ? "" : ""}`}>
-            {nav.name}
+          <div key={index}  className={`text-lg hover:underline hover:font-bold ${activesection === nav.name ? "" : ""}`} onClick={() => scrollWithOffset(nav.link)}  >
+           {nav.name}
+           
             <div className={`bg-[#087f9b] h-0.5 rounded-xl ${activesection === nav.name ? "flex" : "hidden"}`}></div>
 
           </div>
@@ -301,7 +315,7 @@ export default function Home() {
 
 
          {/* Transformation */}
-         <div ref={sectionRefs.Transformation} className='w-full h-full mt-20 flex flex-col '>
+         <div id='#transformation' ref={sectionRefs.Transformation} className='w-full h-full mt-20 flex flex-col '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Transformation" />
           <Bodytext text="Check out how it transformed" />
@@ -342,7 +356,7 @@ export default function Home() {
 
 
          {/* Resources */}
-      <div ref={sectionRefs.Resources} className='w-full h-full mt-40 flex flex-col bg-gradient-to-br from-slate-50 to-blue-50'>
+      <div id='#resources' ref={sectionRefs.Resources} className='w-full h-full mt-40 flex flex-col bg-gradient-to-br from-slate-50 to-blue-50'>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing mt-5'>
           <Heading text="Resources" />
           <Bodytext text="Following are the resources we used." />
