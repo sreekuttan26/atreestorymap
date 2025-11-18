@@ -264,7 +264,7 @@ const Place2 = () => {
                 <img
                     src="/svg/Place_map.svg"
                     alt="dimmed"
-                    className={`object-contain w-[80%] h-full   pl-20`}
+                    className={`object-contain w-[65%] h-full   pl-20 `}
                 />
             </div>
 
@@ -330,11 +330,11 @@ const Place2 = () => {
 
             {/* Content boxes */}
             <div className="relative z-20 flex flex-col gap-20 pt-40 items-end px-20 w-full ">
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200  ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200 shadow-2xl ">
                     <div ref={box0Ref}>
                         <Image
                             alt="img1"
-                            src="/lake_sky.png"
+                            src="/place_1.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -345,11 +345,11 @@ const Place2 = () => {
                         <p>Venkateshpura Lake is a relatively small lake, extending a little over 10 acres. It is managed by the Bruhat Bangalore Mahanagara Palike (BBMP), Bengaluru’s civic body. Located in Sampigehalli in the Arkavathy Layout of Jakkur Ward, the lake is sometimes more familiar to the locals as Sampigehalli Lake, its old name</p>
                 </div>
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200  ">
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-0 border-gray-200 shadow-2xl ">
                     <div ref={box1Ref}>
                         <Image
                             alt="img1"
-                            src="/lake_drone.png"
+                            src="/place__2.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
@@ -363,7 +363,7 @@ const Place2 = () => {
                     <div ref={box2Ref}>
                         <Image
                             alt="img1"
-                            src="/lake_gts.png"
+                            src="/place_3.png"
                             width={500}
                             height={300}
                             className="object-cover rounded-lg"
