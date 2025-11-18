@@ -22,13 +22,16 @@ const Restoration = () => {
             content: (
                 <span>
                     <h1 className="color-b text-lg font-bold mt-10">Assessing water quality</h1>
-                    <iframe
-                        className="w-full h-[450px] rounded-xl"
+                    <div className="flex items-center justify-center my-6">
+                         <iframe
+                        className="w-[500px] h-[350px] rounded-xl"
                         src="https://www.youtube.com/embed/QGAwMq_VobI?mute=1&controls=1"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     />
+                    </div>
+                   
                     <Bodytext
                         text={
                             <p>
@@ -38,20 +41,39 @@ const Restoration = () => {
                     />
 
                     <h1 className="color-b text-lg font-bold mt-20">Biodiversity</h1>
-                  <video
-                            src="https://resourcespace.atree.org/pages/download.php?ref=150&size=pre&ext=mp4&page=1&alternative=-1&watermarked=&k=63ce0f2d98&noattach=true&v=1763372426"
-                            className="w-full h-[850px] rounded-xl object-cover"
-                            
-                            muted
-                            playsInline
-                            controls
-                               // optional custom thumbnail
-                        />
+
+                    <div className="flex items-center justify-center my-6">
+                         <video
+                        src="https://resourcespace.atree.org/pages/download.php?ref=150&size=pre&ext=mp4&page=1&alternative=-1&watermarked=&k=63ce0f2d98&noattach=true&v=1763372426"
+                        className="w-[450px] h-[450px]  rounded-xl object-contain"
+
+                        muted
+                        playsInline
+                        controls
+                    // optional custom thumbnail
+                    />
+                    </div>
+
+
+
+
+
+
+                   
                     <Bodytext
                         text={
                             <p>
                                 To understand the ecological state of the area, baseline surveys were essential. Systematic assessments of butterflies, fishes, reptiles, birds, amphibians, bees and vegetation yielded valuable data and helped chart a roadmap for conserving the lake.
                             </p>
+                        }
+                    />
+
+                    <Bodytext
+                        text={
+                            <span>
+                                <b>Biophobia to Biophilia:</b>   Systematic walks helped residents to familiarise themselves with the lake’s biodiversity. Herp walks, insect walks, bat walks – timed to when these species are most active – introduced participants to often-overlooked wildlife, helping them shed long-held fears and aversions (biphobia) and develop a genuine appreciation (biophilia) for these lesser charismatic species.
+
+                            </span>
                         }
                     />
                 </span>
@@ -70,6 +92,10 @@ const Restoration = () => {
                         <li><strong>Inconducive for human use and recreation.</strong></li>
                         <li><strong>Need to involve local community.</strong></li>
                     </ul>
+
+
+
+
                 </span>
             )
         },
@@ -86,10 +112,31 @@ const Restoration = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     />
-                    <ul className="list-disc list-inside mb-4 space-y-2 mt-10">
-                        <li><strong>Mediations combined grey (engineered) and green (nature-based) solutions.</strong></li>
-                        <li><strong>Shoreline rehabilitation introduced drip irrigation with inputs from geologist and landscape artist.</strong></li>
-                    </ul>
+                    <Bodytext
+                        text={
+                            <span>
+                                Aerators were installed as they work by circulating water and increasing dissolved oxygen, thus helping prevent nutrient build-up and algal blooms and creating a healthy habitat for fish and other organisms.
+
+                            </span>
+                        }
+                    />
+                    <Bodytext
+                        text={
+                            <span>
+                                Six floating islands were installed, with native vegetation like Cyperus, Typha and Centella Asiatica to help filter contaminants while also creating nesting spaces for birds and insects.
+
+                            </span>
+                        }
+                    />
+                    <Bodytext
+                        text={
+                            <span>
+                                Shoreline rehabilitation included removing water hyacinth and weeds along the shore, planting native species to facilitate soil stability and support biodiversity. The trails were designed to mimic the dry Deccan gardens with grasses that Bangalore historically had.
+
+                            </span>
+                        }
+                    />
+
                 </span>
             )
         },
@@ -107,7 +154,7 @@ const Restoration = () => {
                     />
                     <Bodytext text={<p>The community pitched in to remove plastic, discarded clothes and other accumulated waste.</p>} />
                     <Bodytext text={<p>Removing invasives from land and water: Lantana and Parthenium were extracted from the area surrounding the lake. Water hyacinth was removed from the lake.</p>} />
-                    <Bodytext text={<p>Weed to waste: Wood from lantana and trimmed Pongamia trees formed mounds for butterfly garden, while tyres, debris and lantana were repurposed for seating.</p>} />
+
                 </span>
             )
         },
@@ -123,16 +170,19 @@ const Restoration = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                     />
-                    <Bodytext text={<p>Rewilding with native and pollinator-friendly species. Butterfly trail: Two butterfly mounds were created with host plants for caterpillars and nectar plants for adult butterflies.</p>} />
+                    <Bodytext text={<p>Rewilding with a mix of native  and pollinator friendly species
+                        Butterfly trail: Two butterfly mounds were created with host plants for caterpillars and nectar plants for adult butterflies. A pocket guide to the butterflies of Venkateshpura Lake was also developed to help visitors identify and appreciate the butterflies
+                    </p>} />
 
-                    <h1 className="color-b text-lg font-bold mt-20">Aromatic garden</h1>
+                    <h1 className="color-b text-lg font-bold mt-20">Bee hotel</h1>
                     <iframe
                         className="w-full h-[450px] rounded-xl"
                         src="https://www.youtube.com/embed/csqNOGBXi1o?mute=1&controls=1"
                         title="YouTube video"
                         allowFullScreen
                     />
-                    <Bodytext text={<p>A “bee hotel” made of dead wood, bamboo, twigs and other natural materials was designed to attract solitary bees.</p>} />
+                    <Bodytext text={<p>A “bee hotel” made of dead wood, bamboo, twigs and other natural materials was designed to attract solitary bees – vital pollinators that nest in cavities, live independently and are non-aggressive, providing them safe breeding spaces.</p>} />
+                    <Bodytext text={<p>Around 200 aromatic plants were introduced to support wildlife and offer visitors a sensory-rich experience.</p>} />
 
                     <h1 className="color-b text-lg font-bold mt-20">Pathway</h1>
                     <iframe
@@ -141,35 +191,27 @@ const Restoration = () => {
                         title="YouTube video"
                         allowFullScreen
                     />
-                    <Bodytext text={<p>Uncemented walking trails encouraged slower, mindful walking and allowed vegetation to flourish along the route.</p>} />
-                    <h1 className="color-b text-lg font-bold mt-20">Creatures on canvas</h1>
+                    <Bodytext text={<p>Uncemented walking trails were used in place of conventional paved paths, encouraging slower, mindful walking while allowing vegetation that supports biodiversity to flourish along the route.</p>} />
+
+
+                    
+                    {/* <h1 className="color-b text-lg font-bold mt-20">Creatures on canvas</h1>
 
                     <div className="flex gap-4 items-center justify-center  ">
-                      
+
 
                         <video
                             src="https://www.atree.org/wp-content/uploads/2025/11/creatures-on-canvas.mp4"
                             className="w-full h-[850px] rounded-xl object-contain"
-                            
+
                             muted
                             playsInline
                             controls
-                               // optional custom thumbnail
+                       
                         />
 
-
-
-
-
-
-
-
-
-
-
-
                         <Bodytext text={<p className='items-center justify-center '>Construction waste was repurposed as canvases to showcase the lake’s biodiversity.</p>} />
-                    </div>
+                    </div> */}
 
 
                 </span>
@@ -180,15 +222,17 @@ const Restoration = () => {
             title: 'Formation of lake trust',
             content: (
                 <span>
-                    <Bodytext text={<p>Capacity building for stakeholders to manage emerging challenges like invasives.</p>} />
-                    <h1 className="color-b text-lg font-bold mt-20">Water quality</h1>
+                    <Bodytext text={
+                        <p>Residents living around Venkateshpura Lake worked hard to restore the lake, prompting action from the civic body. When rejuvenation efforts slowed, they shifted focus to protecting the GTS Tower from encroachments, organising rallies and collective actions. To strengthen their work, they formed a trust, Chokkanahalli Sampigehalli Abhivriddhi Forum (CSAF), a move that brought significant media attention.</p>
+                        } />
+                    <h1 className="color-b text-lg font-bold mt-20">A place-based education manual</h1>
                     <iframe
                         className="w-full h-[450px] rounded-xl"
                         src="https://www.youtube.com/embed/csqNOGBXi1o?mute=1&controls=1"
                         title="YouTube video player"
                         allowFullScreen
                     />
-                    <Bodytext text={<p>A place-based education manual was developed for engagement with schools.</p>} />
+                    <Bodytext text={<p>Besides a pocket guide on the butterfly species of Venkateshpura Lake, a place-based manual, focusing on the flora and fauna of the lake, was developed for engagement with schools. Several school walks were held at the lake even while the restoration work was on. Schoolchildren were introduced to the concept of a wetland and its importance through games and other activities.</p>} />
                 </span>
             )
         },
@@ -197,7 +241,21 @@ const Restoration = () => {
             title: 'Participatory water quality monitoring manual for residents',
             content: (
                 <span>
-                    <Bodytext text={<p>Towards a self-sustaining socio-ecological restoration model.</p>} />
+                    <Bodytext text={<p>Films showing simple ways of measuring water quality, such as Secchi depth and Dissolved Oxygen tests, were made freely available. By participating in all restoration activities, including water quality monitoring, residents became equipped and confident to take ownership of these responsibilities.</p>} />
+
+
+                    <h1 className="color-b text-lg font-bold mt-20">Towards a self sustaining socio-ecological restoration model</h1>
+                    <iframe
+                        className="w-full h-[450px] rounded-xl"
+                        src="https://www.youtube.com/embed/csqNOGBXi1o?mute=1&controls=1"
+                        title="YouTube video player"
+                        allowFullScreen
+                    />
+                    <Bodytext text={<p>At Venkateshpura Lake, a self-sustaining socio-ecological restoration model began taking shape as residents steadily built their capacity to steward the ecosystem. Through their lake trust, they took ownership of the emerging challenges, thus laying the foundation for a long-term, community-driven model of lake restoration.</p>} />
+
+
+
+
                 </span>
             )
         }
@@ -251,7 +309,7 @@ const Restoration = () => {
     return (
         <div
             ref={containerRef}
-            className="relative flex gap-12 px-10 py-20"
+            className="relative flex gap-12 px-20 py-20"
         >
             {/* Light Ray Track */}
             <div className="relative">

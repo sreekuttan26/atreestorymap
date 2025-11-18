@@ -25,7 +25,8 @@ import History from "./components/History";
 import Kempegowda from "./components/Kempegowda";
 import History_gts from "./components/History_gts";
 import Restoration from "./components/Restoration";
-import BeforeAfterSlider from "./components/BeforeAfterSlider";
+import Transformation from "./components/Trandformation";
+import Resource from "./components/Resource";
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -269,7 +270,7 @@ export default function Home() {
 
 
          {/* Restoration */}
-      <div ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col '>
+      <div ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col  '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Restoration" />
           <Bodytext text="Venkateshpura Lake presented several challenges, and addressing them needed to be done step by step." />
@@ -300,16 +301,21 @@ export default function Home() {
 
 
          {/* Transformation */}
-      <div ref={sectionRefs.Transformation} className='w-full h-full mt-40 flex flex-col '>
+         <div ref={sectionRefs.Transformation} className='w-full h-full mt-20 flex flex-col '>
         <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
           <Heading text="Transformation" />
-          <Bodytext text="Following are the goals." />
+          <Bodytext text="Check out how it transformed" />
+        </div>
+        <div>
+          <Transformation/>
         </div>
 
-        <div>
-          <BeforeAfterSlider/>
-        </div>
-       
+
+
+
+
+
+        
 
 
 
@@ -319,11 +325,30 @@ export default function Home() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
          {/* Resources */}
-      <div ref={sectionRefs.Transformation} className='w-full h-full mt-40 flex flex-col '>
-        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+      <div ref={sectionRefs.Resources} className='w-full h-full mt-40 flex flex-col bg-gradient-to-br from-slate-50 to-blue-50'>
+        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing mt-5'>
           <Heading text="Resources" />
-          <Bodytext text="Following are the goals." />
+          <Bodytext text="Following are the resources we used." />
+        </div>
+        <div>
+          <Resource/>
         </div>
        
 
