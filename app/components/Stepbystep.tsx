@@ -106,44 +106,15 @@ const Stepbystep = () => {
         },
         {
             id: 3,
-            title: "Intervention",
+            title: "Lake clean-up",
             width: "w-6/7",
             content: (
               <span>
-                    <h1 className="color-b text-lg font-bold mt-10">Installing NBS</h1>
-                    <video
-                            src="https://atree-communication.s3.amazonaws.com/Storymap_media/nbs.mp4"
-                            className="w-full h-[350px] rounded-xl mt-10 object-contain"
-
-                            muted
-                            playsInline
-                            controls
-
-                        />
-                    <Bodytext
-                        text={
-                            <span>
-                                Aerators were installed as they work by circulating water and increasing dissolved oxygen, thus helping prevent nutrient build-up and algal blooms and creating a healthy habitat for fish and other organisms.
-
-                            </span>
-                        }
-                    />
-                    <Bodytext
-                        text={
-                            <span>
-                                Six floating islands were installed, with native vegetation like Cyperus, Typha and Centella Asiatica to help filter contaminants while also creating nesting spaces for birds and insects.
-
-                            </span>
-                        }
-                    />
-                    <Bodytext
-                        text={
-                            <span>
-                                Shoreline rehabilitation included removing water hyacinth and weeds along the shore, planting native species to facilitate soil stability and support biodiversity. The trails were designed to mimic the dry Deccan gardens with grasses that Bangalore historically had.
-
-                            </span>
-                        }
-                    />
+                    <ul className="list-disc list-inside mb-4 space-y-2">
+                        <li><strong>The community pitched in to remove plastic, discarded clothes and other accumulated waste</strong></li>
+                        <li><strong>The community pitched in to remove plastic, discarded clothes and other accumulated waste.</strong></li>
+               
+                    </ul>
 
                 </span>
             ),
@@ -153,10 +124,16 @@ const Stepbystep = () => {
         },
         {
             id: 4,
-            title: "Lake clean-up",
+            title: "Installing Nature-based Solutions",
             width: "w-8/9",
             content: (
                 <span> 
+                        <ul className="list-disc list-inside mb-4 space-y-2">
+                        <li><strong>An aerator was installed to increase the dissolved oxygen by circulating the water.</strong></li>
+                        <li><strong>Six floating islands were installed with native vegetation like Cyperus, Typha and Centella Asiatica to help filter contaminants and prevent nutrient build-up.</strong></li>
+                        <li><strong>Shoreline rehabilitation included removing water hyacinth and weeds along the shore, planting native species to facilitate soil stability and support biodiversity.</strong></li>
+               
+                    </ul>
                      
 
                 </span>
@@ -170,7 +147,17 @@ const Stepbystep = () => {
             title: "Rewilding with a mix of natives",
             width: "w-10/11",
             content: (
-                <span>This is content
+                <span> 
+                    <ul className="list-disc list-inside mb-4 space-y-2">
+                        <li><strong>Two butterfly mounds were created with host plants for caterpillars and nectar plants for adult butterflies.</strong></li>
+                        <li><strong>A pocket guide to the butterflies of Venkateshpura Lake was also developed to help visitors identify and appreciate the butterflies.</strong></li>
+                        <li><strong>A “bee hotel”, made of natural materials like dead wood, bamboo and twigs, was installed to attract solitary bees – non-aggressive and vital pollinators.</strong></li>
+                        <li><strong>Around 200 aromatic plants were introduced to support wildlife and offer visitors a sensory-rich experience.</strong></li>
+                        <li><strong>Uncemented walking trails were used in place of conventional paved paths to encourage slower, mindful walking. </strong></li>
+                        <li><strong>Trails were designed to mimic the dry Deccan gardens with grasses that Bangalore historically had. </strong></li>
+               
+                    </ul>
+                     
 
                 </span>
             ),
@@ -183,7 +170,16 @@ const Stepbystep = () => {
             title: "Formation of lake trust",
             width: "w-14/15",
             content: (
-                <span>This is content
+                <span>
+                       <ul className="list-disc list-inside mb-4 space-y-2">
+                        <li><strong>Pressure from residents prompted action from the civic body to restore the lake.</strong></li>
+                        <li><strong>When restoration efforts slowed, residents shifted focus to the protection of GTS Tower through rallies and collective actions.</strong></li>
+                        <li><strong>They formed a trust – Chokkanahalli Sampigehalli Abhivriddhi Forum (CSAF) –  a move that brought significant media attention.</strong></li>
+                       
+               
+                    </ul>
+
+                    
 
                 </span>
             ),
@@ -196,7 +192,15 @@ const Stepbystep = () => {
             title: "Participatory water quality monitoring",
             width: "w-full",
             content: (
-                <span>This is content
+                <span>
+                    <h1 className="font-bold color-b p-2 ">Empower community</h1>
+                       <ul className="list-disc list-inside mb-4 space-y-2">
+                        <li><strong>Films showing simple water quality steps, such as Secchi depth and Dissolved Oxygen tests, were made freely available. </strong></li>
+                        <li><strong>Residents participated in all restoration activities, including water quality monitoring.</strong></li>
+                        <li><strong>They became equipped and confident to take ownership of the lake’s responsibilities.</strong></li>
+                       
+               
+                    </ul>
 
                 </span>
             ),
