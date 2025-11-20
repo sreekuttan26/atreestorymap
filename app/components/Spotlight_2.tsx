@@ -32,9 +32,9 @@ const SpotLight2 = () => {
     const researcher = useRef<HTMLDivElement>(null);
     const gov = useRef<HTMLDivElement>(null);
 
-    const images = ['biodiveristy', 'migrant', 'pastorials', 'fisher', 'residents', 'researcher', 'gov'];
+    const images = ['biodiveristy','fisher', 'residents', 'researcher', 'gov', 'pastorials', 'migrant'];
 
-    const [brightness, setbrightness]=useState('brightness-100')
+    const [brightness, setbrightness] = useState('brightness-100')
 
 
     const getMaskPosition = (spot: string) => {
@@ -54,7 +54,8 @@ const SpotLight2 = () => {
             case "gov":
                 return { x: "34%", y: "95%" };
             default:
-                return { x: "5%", y: "100%" }; 
+                
+                return { x: "-15%", y: "100%" };
         }
     };
     const pos = getMaskPosition(currentspot);
@@ -62,6 +63,9 @@ const SpotLight2 = () => {
 
     useEffect(() => {
         console.log(currentspot)
+        if(pos.y==='100'){
+           setcurrentspot("none")
+        }
 
     }, [currentspot])
 
@@ -105,6 +109,8 @@ const SpotLight2 = () => {
             end: 'bottom 80%',
             pin: true,
             pinSpacing: false,
+             onLeave: () => setcurrentspot("none"),
+            onLeaveBack: () => setcurrentspot("none"),
         });
 
         ScrollTrigger.create({
@@ -125,127 +131,6 @@ const SpotLight2 = () => {
             pinSpacing: false,
         });
 
-        // Animate mask position on scroll
-        // const tl = gsap.timeline({
-
-        //     scrollTrigger: {
-        //         trigger: boxes[0],
-        //         start: 'top center',
-        //         endTrigger: boxend,
-        //         end: 'top center',
-        //         scrub: true,
-        //         markers:true
-
-        //     },
-        // });
-
-        // // Set mask positions for each box
-        // tl.to(img, { '--maskX': '106%', '--maskY': '55%', duration: 1 })
-        // .to(img, { '--maskX': '10%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '18%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '19%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '14%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '12%', '--maskY': '54%', duration: 1 }) 
-
-
-        //   Biodiversity
-        // gsap.to(img, {
-        //     '--maskX': '15%',
-        //     '--maskY': `30%`,
-        //     duration: 0.1,
-        //     scrollTrigger: {
-        //         trigger: boxes[0],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-
-        //         markers: false
-        //     },
-        // });
-
-        // //migrant
-        // gsap.to(img, {
-        //     '--maskX': '8%',
-        //     '--maskY': `50%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[1],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //pastorials
-        // gsap.to(img, {
-        //     '--maskX': '18%',
-        //     '--maskY': `70%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[2],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //fisher
-        // gsap.to(img, {
-        //     '--maskX': '30%',
-        //     '--maskY': `40%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[3],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //residence
-        // gsap.to(img, {
-        //     '--maskX': '44%',
-        //     '--maskY': `30%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[4],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //researchers
-        // gsap.to(img, {
-        //     '--maskX': '42%',
-        //     '--maskY': `60%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[5],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //governemnt
-        // gsap.to(img, {
-        //     '--maskX': '34%',
-        //     '--maskY': `90%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[6],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-        //         markers: false
-        //     },
-        // });
 
 
 
@@ -255,8 +140,8 @@ const SpotLight2 = () => {
 
     return (
         <div className="relative w-full h-full flex flex-col items-start  justify-start ">
-             
-            
+
+
 
 
             {/* Dimmed base image */}
@@ -264,7 +149,7 @@ const SpotLight2 = () => {
                 <img
                     src="stakeholders.png"
                     alt="dimmed"
-                    className={`object-contain w-[60%] h-full ${brightness} opacity-40 pl-20`}
+                    className={`object-contain w-[60%] h-full ${brightness} ${currentspot==='none'?'':'opacity-40'}   pl-20`}
                 />
             </div>
 
@@ -295,7 +180,7 @@ const SpotLight2 = () => {
                 <img
                     src="stakeholders.png"
                     alt="spotlight"
-                    className={`object-contain w-[60%] h-full brightness-100 pl-20 ${pos.y==='100'?'hidden':''} `}
+                    className={`object-contain w-[60%] h-full brightness-100 pl-20 ${pos.y === '100' ? 'hidden' : ''} `}
                 />
 
 
@@ -345,36 +230,10 @@ const SpotLight2 = () => {
                     <p className="">Venkateshpura Lake – stagnant and overrun by invasives and waste, still supported life. Grey-headed swamphens, Eurasian coots and Black-winged stilts went about their business as usual, while a few cormorants lingered. Introduced fish survived though native ones had vanished. Rock agamas basked, geckos slipped through crevices, butterflies flitted and keelbacks rippled the water. The lake’s flora was dominated by invasives.</p>
                 </div>
 
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200  ">
+
+
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
                     <div ref={box1Ref}>
-                        <Image
-                            alt="img1"
-                            src="/migrant.jpg"
-                            width={500}
-                            height={300}
-                            className="object-cover rounded-lg"
-                        />
-                    </div>
-                    <h1 className="text-lg font-semibold mt-3">Migrants</h1>
-                    <p>Venkateshpura Lake, open and unfenced, served everyone, including migrants in that part of Bengaluru city, who otherwise had to scout around for water to wash their clothes and vessels. Little children were always up for a quick dip, especially with plenty of rocks serving as diving boards.</p>
-                </div>
-
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
-                    <div ref={box2Ref}>
-                        <Image
-                            alt="img1"
-                            src="/pastorial_1.png"
-                            width={500}
-                            height={300}
-                            className="object-cover rounded-lg"
-                        />
-                    </div>
-                    <h1 className="text-lg font-semibold mt-3">Pastoralists</h1>
-                    <span>The grassland flanking Venkateshpura Lake had been the grazing grounds, known locally as <i>gomala</i>, had long served as a grazing ground for livestock. It was among the last remaining patches in the neighbourhood with easy access to grass and water. Pastoralists who brought their livestock here not only sustained their livelihoods but supplied milk to the surrounding city.</span>
-                </div>
-
-                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
-                    <div ref={box3Ref}>
                         <Image
                             alt="img1"
                             src="/fisher_1.png"
@@ -385,11 +244,13 @@ const SpotLight2 = () => {
                     </div>
                     <h1 className="text-lg font-semibold mt-3">Fisher folk</h1>
                     <p>Venkateshpura Lake, a traditional fishing ground, is periodically leased by the municipal body to local fisherfolk. The current leaseholder had stocked the lake with commercial fishes, such as Rohu and Catla. But the dense algal bloom and pollution rendered even these resilient fish vulnerable. As the lake’s health declined, so too did the fisherman’s fragile livelihood.
-</p>
+                    </p>
                 </div>
 
+
+
                 <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
-                    <div ref={box4Ref}>
+                    <div ref={box2Ref}>
                         <Image
                             alt="img1"
                             src="/residents.png"
@@ -402,8 +263,10 @@ const SpotLight2 = () => {
                     <p>For residents, the small lake with its green grass, trees and rocky outcrops was an oasis amid the bustling city. – for the residents living around the lake, this was an idyllic setting within Bengaluru city. The rocks held traces of history. Though never really maintained, the lake kept the neighbourhood cool and fresh. Gradually, however, development choked its inlets and outlets, transforming the wetland into a wasteland. The final straw was when illegal burning consumed a tree to clear for development.</p>
                 </div>
 
+
+
                 <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
-                    <div ref={box5Ref}>
+                    <div ref={box3Ref}>
                         <Image
                             alt="img1"
                             src="/researcher.png"
@@ -417,8 +280,11 @@ const SpotLight2 = () => {
 
                 </div>
 
+
+
+
                 <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
-                    <div ref={box6Ref}>
+                    <div ref={box4Ref}>
                         <Image
                             alt="img1"
                             src="/place.png"
@@ -435,8 +301,60 @@ const SpotLight2 = () => {
 
                     </div>
 
-
                 </div>
+
+
+
+                 <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200 ">
+                    <div ref={box5Ref}>
+                        <Image
+                            alt="img1"
+                            src="/pastorial_1.png"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
+                    <h1 className="text-lg font-semibold mt-3">Pastoralists</h1>
+                    <span>The grassland flanking Venkateshpura Lake had been the grazing grounds, known locally as <i>gomala</i>, had long served as a grazing ground for livestock. It was among the last remaining patches in the neighbourhood with easy access to grass and water. Pastoralists who brought their livestock here not only sustained their livelihoods but supplied milk to the surrounding city.</span>
+                </div>
+
+
+
+
+
+
+                <div className="bg-white p-4 w-[500px] rounded-xl opacity-90 border-2 border-gray-200  ">
+                    <div ref={box6Ref}>
+                        <Image
+                            alt="img1"
+                            src="/migrant.jpg"
+                            width={500}
+                            height={300}
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
+                    <h1 className="text-lg font-semibold mt-3">Migrants</h1>
+                    <p>Venkateshpura Lake, open and unfenced, served everyone, including migrants in that part of Bengaluru city, who otherwise had to scout around for water to wash their clothes and vessels. Little children were always up for a quick dip, especially with plenty of rocks serving as diving boards.</p>
+                </div>
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
                 {/* end box */}
                 <div ref={boxendRef} className=" p-4 w-[500px] rounded-xl opacity-90 "></div>
             </div>

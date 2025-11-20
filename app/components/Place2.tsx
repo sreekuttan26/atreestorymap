@@ -125,129 +125,6 @@ const Place2 = () => {
             pinSpacing: false,
         });
 
-        // Animate mask position on scroll
-        // const tl = gsap.timeline({
-
-        //     scrollTrigger: {
-        //         trigger: boxes[0],
-        //         start: 'top center',
-        //         endTrigger: boxend,
-        //         end: 'top center',
-        //         scrub: true,
-        //         markers:true
-
-        //     },
-        // });
-
-        // // Set mask positions for each box
-        // tl.to(img, { '--maskX': '106%', '--maskY': '55%', duration: 1 })
-        // .to(img, { '--maskX': '10%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '18%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '19%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '14%', '--maskY': '54%', duration: 1 }) 
-        // .to(img, { '--maskX': '12%', '--maskY': '54%', duration: 1 }) 
-
-
-        //   Biodiversity
-        // gsap.to(img, {
-        //     '--maskX': '15%',
-        //     '--maskY': `30%`,
-        //     duration: 0.1,
-        //     scrollTrigger: {
-        //         trigger: boxes[0],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-
-        //         markers: false
-        //     },
-        // });
-
-        // //migrant
-        // gsap.to(img, {
-        //     '--maskX': '8%',
-        //     '--maskY': `50%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[1],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //pastorials
-        // gsap.to(img, {
-        //     '--maskX': '18%',
-        //     '--maskY': `70%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[2],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //fisher
-        // gsap.to(img, {
-        //     '--maskX': '30%',
-        //     '--maskY': `40%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[3],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //residence
-        // gsap.to(img, {
-        //     '--maskX': '44%',
-        //     '--maskY': `30%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[4],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //researchers
-        // gsap.to(img, {
-        //     '--maskX': '42%',
-        //     '--maskY': `60%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[5],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-
-        //         markers: false
-        //     },
-        // });
-
-        // //governemnt
-        // gsap.to(img, {
-        //     '--maskX': '34%',
-        //     '--maskY': `90%`,
-        //     scrollTrigger: {
-        //         trigger: boxes[6],
-        //         start: 'top 60%',
-        //         end: 'center 60%',
-        //         scrub: true,
-        //         markers: false
-        //     },
-        // });
-
-
 
 
 
@@ -260,11 +137,11 @@ const Place2 = () => {
 
 
             {/* Dimmed base image */}
-            <div ref={imgRef} className="absolute top-0 left-0 w-full h-[700px] flex items-center justify-start z-0 ">
+            <div ref={imgRef} className="absolute top-0 left-0 w-full h-[530px] flex items-center justify-start z-0 ">
                 <img
-                    src="/svg/Place_map.svg"
+                    src="/svg/Place_map_img.png"
                     alt="dimmed"
-                    className={`object-contain w-[65%] h-full   pl-20 `}
+                    className={`object-contain w-[65%] h-full pl-20`}
                 />
             </div>
 

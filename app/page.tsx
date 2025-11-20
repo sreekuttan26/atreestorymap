@@ -23,12 +23,12 @@ import StoryMapAccordion from "./components/StoryMapAccordion";
 import Place2 from "./components/Place2";
 import History from "./components/History";
 import Kempegowda from "./components/Kempegowda";
-import History_gts from "./components/History_gts";
 import Restoration from "./components/Restoration";
 import Transformation from "./components/Trandformation";
 import Resource from "./components/Resource";
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
 import Stepbystep from "./components/Stepbystep";
+import History_temple from "./components/History_temple";
 
 
 
@@ -156,7 +156,7 @@ export default function Home() {
       <div id='#history' ref={sectionRefs.History} className='w-full h-auto px-[15vw] mt-20 bird-landing'>
         {/* mt-[1425px] */}
         <Heading text="History" />
-        <Bodytext text="There is little by way of origin story for Venkateshpura Lake. But some little legends from history lend a narrative. Here is one such." />
+        {/* <Bodytext text="There is little by way of origin story for Venkateshpura Lake. But some little legends from history lend a narrative. Here is one such." /> */}
 
         <div className=' w-full h-full relative mt-10'>
           <Kempegowda />
@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         <div className=' w-full h-full relative mt-20'>
-          <History_gts />
+          <History_temple/>
 
         </div>
 
@@ -206,7 +206,7 @@ export default function Home() {
           <Heading text="Stakeholders" />
           <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
         </div>
-        <div className="w-full h-auto mt-20 flex justify-start   relative ">
+        <div className="w-full h-auto mt-0 flex justify-start   relative ">
           <SpotLight2 />
 
         </div>

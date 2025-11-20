@@ -1,6 +1,9 @@
 
-
-import React, { useState } from 'react';
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 interface StorySection {
@@ -20,10 +23,12 @@ const storySections: StorySection[] = [
 
             <div>
 
-                <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Higher dissolved oxygen levels.</strong> </li>
-                    <li><strong>Absence of invasive water hyacinth.</strong></li>
-                    <li><strong>Noticeably reduced algal blooms.</strong> </li>
+                <ul className="list-disc px-4 mb-4 space-y-2">
+                    <li>Water tests showed higher dissolved oxygen levels. </li>
+                    <li>Invasive water hyacinth disappeared.</li>
+                    <li>Native aquatic plants recovered. </li>
+                    <li>Water surface became clear and free. </li>
+                    <li>Algal blooms reduced considerably. </li>
 
                 </ul>
 
@@ -31,7 +36,7 @@ const storySections: StorySection[] = [
         ),
 
 
-        imageUrl: 'https://thumbs.dreamstime.com/b/lake-water-india-good-soul-253792778.jpg'
+        imageUrl: '/plusmap1.png'
     },
     {
         id: '2',
@@ -39,17 +44,14 @@ const storySections: StorySection[] = [
 
         content: (
             <div>
-                <div>
-                    <span className='color-b'><b>Construction waste to biodiversity panels :</b> </span>
+                <ul className="list-disc px-4 mb-4 space-y-2">
+                    <li>Uncemented pathways allow visitors to connect closely with the landscape. </li>
+                    <li>Repurposed rocks along the pathway serve as canvases showcasing the lake’s biodiversity.</li>
+                    <li>Artworks, retaining the natural texture of the rocks, help people anticipate what they might encounter at the lake. </li>
+                    <li>Wood from lantana and trimmed Pongamia trees form mounds for the butterfly garden. </li>
+                    <li>Repurposed tyres, debris and lantana serve as seats.</li>
 
-                    <p>Construction waste was repurposed along the pathway to serve as canvases to showcase the lake’s biodiversity. The artworks, created without base colours or primers, retain the natural texture of the rocks, blending seamlessly with the landscape. The rock paintings act as inviting entry points, helping people discover the lake’s biodiversity and anticipate what they might encounter.</p>
-                </div>
-
-                <div className='mt-5'>
-                    <span className='color-b'><b>Invasives repurposed as seating :</b> </span>
-
-                    <p>Wood from lantana and trimmed Pongamia trees formed mounds for butterfly garden, while tyres, debris and lantana were repurposed for seating. Climbers encouraged to weave over the lantana seats have since flourished, giving the seats a natural earthy look that blends with the landscape.</p>
-                </div>
+                </ul>
 
 
 
@@ -58,7 +60,7 @@ const storySections: StorySection[] = [
         ),
 
 
-        imageUrl: 'https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=800&h=400&fit=crop'
+        imageUrl: '/plusmap2.png'
     },
     {
         id: '3',
@@ -69,19 +71,20 @@ const storySections: StorySection[] = [
         content: (
 
             <div>
-                <p className="">
-                    Native fish species were reintroduced into the lake by the local fisherfolk. Native species were favoured for vegetation too. Butterfly host and nectar plants along with bee-friendly species were carefully curated, while bee hotels were installed to provide ample nesting spaces for solitary bees, enriching the lake’s ecological diversity. Residents joined hands with the researchers in planting these plant species.
-                </p>
-                <p className="mt-5">
-                    Orchids that were carefully planted on trees have thrived and they now bloom seasonally.
-                </p>
+                <ul className="list-disc px-4 mb-4 space-y-2">
+                    <li>Native fish species are once again part of the lake, thanks to the local fisherfolk. </li>
+                    <li>Native plant species, prioritised for all vegetation efforts, thrive under people’s care.</li>
+                    <li>Orchids that were carefully planted on trees bloom seasonally.</li>
+                   
+
+                </ul>
 
 
             </div>
         ),
 
 
-        imageUrl: 'https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=800&h=400&fit=crop'
+        imageUrl: '/plusmap3.png'
     },
     {
         id: '4',
@@ -93,9 +96,9 @@ const storySections: StorySection[] = [
 
             <div>
 
-                <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li><strong>Bees occupy the the bee hotel</strong> </li>
-                    <li><strong>Butterflies flit in the butterfly garden.</strong> </li>
+                <ul className="list-disc px-4 mb-4 space-y-2">
+                    <li>Carefully curated butterfly host and nectar plants, along with bee-friendly species, welcome diverse wildlife visitors.</li>
+                    <li>Bee hotels provide ample nesting spaces for solitary bees. </li>
 
                 </ul>
 
@@ -103,7 +106,7 @@ const storySections: StorySection[] = [
         ),
 
 
-        imageUrl: 'https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=800&h=400&fit=crop'
+        imageUrl: '/plusmap4.png'
     },
     {
         id: '5',
@@ -113,17 +116,18 @@ const storySections: StorySection[] = [
         content: (
 
             <div>
-                <p className="">
-                    Bird species, such as cormorants, Oriental darters, stilts, ducks and even pelicans, throng to the lake in healthy numbers, signalling a marked improvement in water quality. The floating islands are occasionally used by the resident water birds for nesting. The crowning moment, however, was the return of the Pied kingfisher, which had vanished during the lake’s polluted years.
+                  <ul className="list-disc px-4 mb-4 space-y-2">
+                    <li>Bird species, like cormorants, Oriental darters, stilts, ducks and even pelicans, throng to the lake in healthy numbers.</li>
+                    <li>The floating islands are occasionally used by the resident water birds for nesting.  </li>
+                    <li>The crowning moment, however, has been the return of the Pied kingfisher, which had vanished during the lake’s polluted years. </li>
 
-                </p>
-
+                </ul>
 
             </div>
         ),
 
 
-        imageUrl: 'https://images.unsplash.com/photo-1542224566-6e85f2e6772f?w=800&h=400&fit=crop'
+        imageUrl: '/plusmap5.png'
     },
     {
         id: '6',
@@ -133,52 +137,92 @@ const storySections: StorySection[] = [
         content: (
 
             <div>
-                <p className="">
-                    Sustained efforts from all involved groups of people to restore Venkateshpura Lake paid off.  The lake transformed from a neglected waterbody into a vibrant socio-ecological space, shaped and informed by the community. The lake now sees a lot of footfallThe Lake Forum is now well-informed about potential pollution sources and knows whom to alert when issues such as algal blooms rise. Members actively document and share photographs of birds, sunrises and sunsets, fostering a sense of pride, attachment and shared responsibility for the lake. They also participate in education programmes and attend stakeholder meetings whenever they are organized, ensuring that citizen voices remain part of the lake’s management dialogue.
+                  <ul className="list-disc px-4  mb-4 space-y-2">
+                    <li>Sustained community-driven efforts transformed Venkateshpura Lake from a neglected waterbody into a vibrant socio-ecological space.</li>
+                    <li>The lake attracts a lot of footfall and active daily use by residents. </li>
+                    <li>The Lake Forum is well-informed about potential pollution sources and knows whom to alert during issues like algal blooms.</li>
+                    <li>Members regularly document and share photos of birds, sunrises and sunsets, building pride and a sense of connection. </li>
+                    <li>They participate in education programmes and attend stakeholder meetings, ensuring that citizen voices remain central to lake management.  </li>
 
-                </p>
-
+                </ul>
 
             </div>
         ),
 
 
-        imageUrl: '/plusmap.png'
+        imageUrl: '/plusmap6.png'
     }
 ];
 
 export default function Trandformation() {
-    const [openId, setOpenId] = useState<string | null>('1');
 
-    const[imageLoaded, setImageLoaded] = useState('/plusmap.png');
+    const left_img_ref = useRef<HTMLDivElement>(null);
+    const end_ref = useRef<HTMLDivElement>(null);
+    const [openId, setOpenId] = useState<string | null>('0');
+    const element = left_img_ref.current;
 
-    const toggleSection = (id: string) => {
+    // useEffect(() => {
+
+    //     const end_element = end_ref.current;
+    //     if (!element) return;
+    //     ScrollTrigger.create({
+    //         trigger: element,
+    //         pin: element,
+    //         start: 'top 30%',
+    //         endTrigger: end_element,
+    //         end: 'top 90%',
+    //         scrub: false,
+    //         markers: true,
+    //     });
+    // }, []);
+
+
+
+
+
+
+
+
+    const [imageLoaded, setImageLoaded] = useState('/plusmap0.png');
+
+    const toggleSection = (id: string, isOpen: boolean) => {
         setOpenId(openId === id ? null : id);
 
-        setImageLoaded(storySections[parseInt(id)-1].imageUrl || '/plusmap.png');
+        if (isOpen) {
+            setImageLoaded('/plusmap0.png');
+            return;
+        }
+
+        setImageLoaded(storySections[parseInt(id) - 1].imageUrl || '/plusmap0.png');
     };
 
     return (
         <div className='flex gap-10 mt-10'>
-            <img
-                src={imageLoaded}
+            <div ref={left_img_ref}>
+                <img
+                    src={imageLoaded}
 
-                className="object-conatin h-[700px] w-[780px] px-10"
+                    className="object-conatin h-[700px] w-[780px] px-10"
 
 
-            >
+                >
 
-            </img>
+                </img>
+            </div>
+
             <div>
 
                 <div className="">
 
                     <div className="   px-4">
-                        <div className="max-w-4xl mx-auto mt-10 w-full">
+                        <div className="w-2xl mx-auto mt-10 ">
 
 
                             {/* Accordion */}
                             <div className="space-y-4  ">
+                                <p className="text-slate-400 text-sm">
+                                    Click on each section to expand and explore the story
+                                </p>
                                 {storySections.map((section, index) => {
                                     const isOpen = openId === section.id;
 
@@ -189,7 +233,7 @@ export default function Trandformation() {
                                         >
                                             {/* Accordion Header */}
                                             <button
-                                                onClick={() => toggleSection(section.id)}
+                                                onClick={() => toggleSection(section.id, isOpen)}
                                                 className="w-full px-6 py-5 flex items-center justify-between cursor-pointer"
                                             >
                                                 <div className="flex items-center gap-4">
@@ -221,27 +265,13 @@ export default function Trandformation() {
                                                     }`}
                                                 style={{ overflow: 'hidden' }}
                                             >
-                                                <div className="p-6">
-                                                    {/* {section.imageUrl && (
-                                            <img
-                                                src={section.imageUrl}
-                                                alt={section.title}
-                                                className="w-full h-64 object-cover rounded-lg mb-4"
-                                            />
-                                        )} */}
-
-                                                    <div className="flex items-center gap-2 text-sm text-slate-600 mb-4">
-
-
-                                                    </div>
+                                                <div className="px-6 py-2 pb-6">                                                
 
                                                     <span className="text-slate-700 leading-relaxed">
                                                         {section.content}
                                                     </span>
 
-                                                    {/* <button className="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                      Explore on Map
-                    </button> */}
+
                                                 </div>
                                             </div>
                                         </div>
@@ -250,15 +280,15 @@ export default function Trandformation() {
                             </div>
 
                             {/* Footer */}
-                            <div className="text-center mt-12 pb-8">
-                                <p className="text-slate-400 text-sm">
-                                    Click on each section to expand and explore the story
-                                </p>
+                            <div className="text-center mt-2 pb-8">
+
                             </div>
                         </div>
                     </div>
+                    {/* <div ref={end_ref} className="text-center border-2">end </div> */}
                 </div>
             </div>
+
 
         </div>
     );

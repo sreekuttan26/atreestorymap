@@ -20,7 +20,7 @@ const storySections: StorySection[] = [
                 <p className="mb-4">
                     This can be achived by the following steps.
                 </p>
-                <ul className="list-disc list-inside mb-4 space-y-2">
+                <ul className="list-disc px-4 mb-4 space-y-2">
                     <li><strong>Control sewage flow and waste dumping</strong> </li>
                     <li><strong>Ensure flow between lakes- inlet/ outlet</strong></li>
                     <li><strong>Install nature based solutions like aerator, floating island</strong> </li>
@@ -43,7 +43,7 @@ const storySections: StorySection[] = [
                 <p className="mb-4">
                     This can be achived by the following steps.
                 </p>
-                <ul className="list-disc list-inside mb-4 space-y-2">
+                <ul className="list-disc px-4 mb-4 space-y-2">
                     <li><strong> Remove Lantana and other weeds.</strong> </li>
                     <li><strong> Create uncemented( natural) walking paths with native species to bring back biodiversity.</strong> </li>
                     <li><strong> Plant native species suitable for the landscape.</strong> </li>
@@ -68,7 +68,7 @@ const storySections: StorySection[] = [
                 <p className="mb-4">
                     This can be achived by the following steps.
                 </p>
-                <ul className="list-disc list-inside mb-4 space-y-2">
+                <ul className="list-disc px-4 mb-4 space-y-2">
                     <li><strong>Install bee resorts to support pollinator diversity.</strong> </li>
                     <li><strong>Grow food plants for Solitary bees.</strong> </li>
                     <li><strong>Create a habitat for butterflies</strong> </li>
@@ -93,7 +93,7 @@ const storySections: StorySection[] = [
                 <p className="mb-4">
                     This can be achived by the following steps.
                 </p>
-                <ul className="list-disc list-inside mb-4 space-y-2">
+                <ul className="list-disc px-4 mb-4 space-y-2">
                     <li><strong>Stop rock quarrying in the vicinity.</strong> </li>
                     <li><strong>Create awareness about the historical structure.</strong> </li>
                     <li><strong>Prevent further encroachments.</strong> </li>
@@ -116,7 +116,7 @@ const storySections: StorySection[] = [
                 <p className="mb-4">
                     This can be achived by the following steps.
                 </p>
-                <ul className="list-disc list-inside mb-4 space-y-2">
+                <ul className="list-disc px-4 mb-4 space-y-2">
                     <li><strong>Conduct community activities to encourage greater interaction with the lake.</strong> </li>
                     <li><strong>Familiarise people with different taxa through nature walks and trails.</strong> </li>
                     <li><strong>Organise focused activities for school children.</strong> </li>
@@ -143,11 +143,16 @@ export default function StoryMapAccordion() {
 
     return (
         <div className="  px-6">
-            <div className="max-w-4xl mx-auto mt-10">
+            <div className="w-xl mx-auto mt-10">
 
 
                 {/* Accordion */}
                 <div className="space-y-4">
+                     <div className="text-center mt-12 pb-8">
+                    <p className="text-slate-400 text-sm">
+                        Click on each section to expand and explore the story
+                    </p>
+                </div>
                     {storySections.map((section, index) => {
                         const isOpen = openId === section.id;
 
@@ -218,12 +223,8 @@ export default function StoryMapAccordion() {
                     })}
                 </div>
 
-                {/* Footer */}
-                <div className="text-center mt-12 pb-8">
-                    <p className="text-slate-400 text-sm">
-                        Click on each section to expand and explore the story
-                    </p>
-                </div>
+              
+               
             </div>
         </div>
     );
