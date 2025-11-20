@@ -221,7 +221,7 @@ const Stepbystep = () => {
             start: 'top 20%',
             pin: leftref,
             endTrigger: lastitem,
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: true,
             markers: false,
         })
