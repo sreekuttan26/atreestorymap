@@ -27,6 +27,9 @@ import History_gts from "./components/History_gts";
 import Restoration from "./components/Restoration";
 import Transformation from "./components/Trandformation";
 import Resource from "./components/Resource";
+import BeforeAfterSlider from "./components/BeforeAfterSlider";
+import Stepbystep from "./components/Stepbystep";
+
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -115,9 +118,9 @@ export default function Home() {
       {/* navigation menu */}
       <div className="w-full h-[100px] bg-gray-100 shadow-xl flex gap-5 justify-evenly items-center sticky top-0 cursor-pointer z-50 bird-landing">
         {nav_items.map((nav, index) => (
-          <div key={index}  className={`text-lg hover:underline hover:font-bold ${activesection === nav.name ? "" : ""}`} onClick={() => scrollWithOffset(nav.link)}  >
-           {nav.name}
-           
+          <div key={index} className={`text-lg hover:underline hover:font-bold ${activesection === nav.name ? "" : ""}`} onClick={() => scrollWithOffset(nav.link)}  >
+            {nav.name}
+
             <div className={`bg-[#087f9b] h-0.5 rounded-xl ${activesection === nav.name ? "flex" : "hidden"}`}></div>
 
           </div>
@@ -127,7 +130,7 @@ export default function Home() {
 
 
       {/* introduction */}
-      <div id='#introduction' ref={sectionRefs.Introduction} className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
+      <div id='#introduction' ref={sectionRefs.Introduction} className='w-full h-auto px-[15vw]  mt-20 bird-landing'>
         <Heading text="Introduction" />
         <Bodytext text="This is a story of Venkateshpura Lake – a modest freshwater lake tucked away in the northern part of Bengaluru, a story of how the lake lost its vitality as human development took precedence. Over time, it turned into a stagnant, degraded water body, until one day, a few concerned citizens decided to bring it back to life, not just for the lake’s sake, but for their own. " />
       </div>
@@ -136,11 +139,11 @@ export default function Home() {
 
       {/* Place */}
       <div id='#place' ref={sectionRefs.Place}>
-        <div className='w-full h-auto px-[20vw]  mt-20 bird-flying'>
+        <div className='w-full h-auto px-[15vw]  mt-20 bird-flying'>
           <Heading text="Place" />
           <Bodytext text="Where is Venkateshpura lake? " />
         </div>
-        <div ref={sectionRefs.Place} className="w-full h-full mt-20 relative ">
+        <div ref={sectionRefs.Place} className="w-full h-full mt-0 relative ">
           {/* h-[895px] */}
           <Place2 />
         </div>
@@ -150,7 +153,7 @@ export default function Home() {
 
 
       {/* history */}
-      <div id='#history' ref={sectionRefs.History} className='w-full h-auto px-[20vw] mt-20 bird-landing'>
+      <div id='#history' ref={sectionRefs.History} className='w-full h-auto px-[15vw] mt-20 bird-landing'>
         {/* mt-[1425px] */}
         <Heading text="History" />
         <Bodytext text="There is little by way of origin story for Venkateshpura Lake. But some little legends from history lend a narrative. Here is one such." />
@@ -180,7 +183,7 @@ export default function Home() {
 
       {/*Degradation  */}
       <div id='#degradation' ref={sectionRefs.Degradation} className=' mt-30' >
-        <div className='w-full h-auto px-[20vw]    bird-landing'>
+        <div className='w-full h-auto px-[15vw]    bird-landing'>
           <Heading text="Degradation of the lake" />
           <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
 
@@ -199,7 +202,7 @@ export default function Home() {
 
       {/* stakeholder */}
       <div id='#stakeholders' ref={sectionRefs.Stakeholders}>
-        <div className='w-full h-auto px-[20vw]  mt-20 bird-landing'>
+        <div className='w-full h-auto px-[15vw]  mt-20 bird-landing'>
           <Heading text="Stakeholders" />
           <Bodytext text="Civilisations evolved around waterbodies. Be it a pond or a lake, a waterbody is a shared resource. For its stakeholders, it sustains livelihoods, shapes cultural practices and supports ecological balance." />
         </div>
@@ -215,7 +218,7 @@ export default function Home() {
 
       {/* goal setting */}
       <div id='#goal' ref={sectionRefs.Goal_Setting} className='w-full h-full mt-20 flex flex-col '>
-        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+        <div className='w-full h-auto flex flex-col px-[15vw] bird-landing'>
           <Heading text="Goal Setting" />
           <Bodytext text="A vision of our restored lake" />
         </div>
@@ -249,10 +252,10 @@ export default function Home() {
 
 
       {/* mascot */}
-      <div className="w-full h-full px-[20vw] mt-20">
+      <div className="w-full h-full px-[15vw] mt-20">
         <h1 className="text-xl font-semibold color-b">Choosing our mascot- The Pied kingfisher</h1>
         <div className='w-full flex gap-2 items-center mt-10'>
-          <div className='h-[300px] w-[1800px] cursor-pointer bg-gray-100 rounded-2xl shadow-xl flex flex-col items-center justify-center object-center'  onClick={() => { setshowbird(!showbird) }}>
+          <div className='h-[300px] w-[1800px] cursor-pointer bg-gray-100 rounded-2xl shadow-xl flex flex-col items-center justify-center object-center' onClick={() => { setshowbird(!showbird) }}>
             <img
 
               src='/bird-sit.gif'
@@ -283,45 +286,54 @@ export default function Home() {
 
 
 
-         {/* Restoration */}
+      {/* Restoration */}
       <div id='#restoration' ref={sectionRefs.Restoration} className='w-full h-full mt-40 flex flex-col  '>
-        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+        <div className='w-full h-auto flex flex-col px-[15vw] bird-landing'>
           <Heading text="Restoration" />
           <Bodytext text="Venkateshpura Lake presented several challenges, and addressing them needed to be done step by step." />
         </div>
-        
-        <div className="w-full px-[20vw]">
-          <Restoration/>
+
+        <div className="w-full px-[15vw]">
+          {/* <StepbystepRestoration /> */}
+          <Stepbystep/>
 
         </div>
-       
 
+        <div className="w-full px-[15vw]">
+          {/* <Restoration /> */}
 
-
-      </div>
-
-
-
-
+        </div>
 
 
 
 
-
+      </div> 
 
 
 
 
 
 
-         {/* Transformation */}
-         <div id='#transformation' ref={sectionRefs.Transformation} className='w-full h-full mt-20 flex flex-col '>
-        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing'>
+
+
+
+
+
+      {/* Transformation */}
+      <div id='#transformation' ref={sectionRefs.Transformation} className='w-full h-full mt-20 flex flex-col '>
+        <div className='w-full h-auto flex flex-col px-[15vw] bird-landing'>
           <Heading text="Transformation" />
           <Bodytext text="Check out how it transformed" />
         </div>
+
+        <div className='w-full h-full '>
+        <BeforeAfterSlider />
+      </div>
+
+
+
         <div>
-          <Transformation/>
+          <Transformation />
         </div>
 
 
@@ -329,7 +341,7 @@ export default function Home() {
 
 
 
-        
+
 
 
 
@@ -349,22 +361,22 @@ export default function Home() {
 
 
 
-      
 
 
 
 
 
-         {/* Resources */}
+
+      {/* Resources */}
       <div id='#resources' ref={sectionRefs.Resources} className='w-full h-full mt-40 flex flex-col bg-gradient-to-br from-slate-50 to-blue-50'>
-        <div className='w-full h-auto flex flex-col px-[20vw] bird-landing mt-5'>
+        <div className='w-full h-auto flex flex-col px-[15vw] bird-landing mt-5'>
           <Heading text="Resources" />
           <Bodytext text="Following are the resources we used." />
         </div>
         <div>
-          <Resource/>
+          <Resource />
         </div>
-       
+
 
 
 

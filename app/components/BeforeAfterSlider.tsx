@@ -50,21 +50,21 @@ const BeforeAfterSlider = () => {
 
   return (
     <div className="flex items-center justify-center   ">
-      <div className="w-full max-w-4xl">
+      <div className="w-full px-4 ">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12">
           Before & After Comparison
         </h1>
         
         <div
           ref={containerRef}
-          className="relative w-full aspect-video overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl cursor-col-resize select-none"
+          className="relative w-full aspect-video overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl cursor-col-resize select-none h-[800px]"
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
         >
           {/* After Image (Background) */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400 ">
             <img 
-            src='./fisher_1.png'
+            src='./after_lake.png'
               alt="Before"
               className="w-full h-full object-cover"
             />
@@ -76,11 +76,11 @@ const BeforeAfterSlider = () => {
 
           {/* Before Image (Clipped) */}
           <div
-            className="absolute inset-0 overflow-hidden"
+            className="absolute inset-0 overflow-hidden "
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img 
-            src='./fisher.png'
+            src='./before_lake.png'
               alt="Before"
               className="w-full h-full object-cover"
             />
